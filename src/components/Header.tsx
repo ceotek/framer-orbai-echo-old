@@ -32,7 +32,7 @@ const Header = () => {
                 <img src={diLogo} alt="DI Logo" className="relative z-10 h-10 w-10 transform group-hover:scale-110 transition-transform duration-300 object-contain" />
               </div>
             </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">OrbAI</span>
+            <span className="text-xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">DEFEND INFO</span>
           </div>
 
           {/* Desktop Navigation */}
