@@ -2,7 +2,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Lightbulb, PenTool, MessageSquare, Workflow } from 'lucide-react';
-import orbaiLogo from '@/assets/orbai-logo.png';
 
 const ServicesSection = () => {
   const services = [
@@ -68,8 +67,8 @@ const ServicesSection = () => {
                       <div className="absolute inset-1 bg-gradient-to-br from-white/40 to-transparent rounded-full blur-sm"></div>
                       
                       {/* Icon */}
-                      <div className="relative z-10">
-                        <img src={orbaiLogo} alt="Service Icon" className="w-6 h-6 opacity-80 transform hover:scale-110 transition-transform duration-300" />
+                      <div className="relative z-10 text-primary">
+                        {service.icon}
                       </div>
                     </div>
                   </div>
