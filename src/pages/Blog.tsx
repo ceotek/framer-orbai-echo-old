@@ -1,10 +1,11 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, PenTool } from 'lucide-react';
+import { supabase } from '@/integrations/supabase/client';
 
 const Blog = () => {
   useEffect(() => {
@@ -38,26 +39,33 @@ const Blog = () => {
     };
   }, []);
 
-  const posts = [
-    {
-      title: 'Advanced Threat Intelligence: What 2025 Brings',
-      excerpt: 'From AI-driven phishing to deepfake-enabled fraud, explore the biggest threats emerging in 2025 and how to counter them effectively.',
-      tag: 'Threat Intelligence',
-      date: '2025-09-10'
-    },
-    {
-      title: 'Digital Footprint Removal: Myths vs Reality',
-      excerpt: 'Understand what can and cannot be permanently removed from the internet, and how enterprises should approach reputation defense.',
-      tag: 'Footprint Removal',
-      date: '2025-08-22'
-    },
-    {
-      title: 'Recovering Stolen Crypto: A Practical Guide',
-      excerpt: 'How blockchain analysis and coordinated operations can maximize the chance of recovering digital assets.',
-      tag: 'Asset Recovery',
-      date: '2025-08-01'
+  const [posts, setPosts] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  const fetchPosts = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('blog_posts')
+        .select('*')
+        .eq('status', 'published')
+        .order('published_at', { ascending: false });
+
+      if (error) {
+        console.error('Error fetching posts:', error);
+        return;
+      }
+
+      setPosts(data || []);
+    } catch (error) {
+      console.error('Error fetching posts:', error);
+    } finally {
+      setLoading(false);
     }
-  ];
+  };
+
+  useEffect(() => {
+    fetchPosts();
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-accent/5 overflow-x-hidden">
@@ -83,24 +91,43 @@ const Blog = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-              {posts.map((post, idx) => (
-                <Card key={idx} className="bg-card/80 backdrop-blur-glass border border-border/60 shadow-glass hover:shadow-glass-hover transition-all duration-300 rounded-2xl">
-                  <CardHeader>
-                    <Badge variant="outline" className="w-fit mb-2">{post.tag}</Badge>
-                    <CardTitle className="text-xl text-foreground">{post.title}</CardTitle>
-                    <p className="text-xs text-muted-foreground">{new Date(post.date).toLocaleDateString()}</p>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4">{post.excerpt}</p>
-                    <Button variant="ghost" className="story-link px-0">
-                      Read more
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            {loading ? (
+              <div className="text-center py-12">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+                <p className="text-muted-foreground">Loading blog posts...</p>
+              </div>
+            ) : posts.length === 0 ? (
+              <Card className="bg-card/80 backdrop-blur-glass border border-border/60 shadow-glass text-center py-12 mb-16">
+                <CardContent>
+                  <PenTool className="w-12 h-12 mx-auto mb-4 text-muted-foreground" />
+                  <h2 className="text-xl font-semibold mb-2">No blog posts yet</h2>
+                  <p className="text-muted-foreground">Check back soon for our latest cybersecurity insights.</p>
+                </CardContent>
+              </Card>
+            ) : (
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                {posts.map((post) => (
+                  <Card key={post.id} className="bg-card/80 backdrop-blur-glass border border-border/60 shadow-glass hover:shadow-glass-hover transition-all duration-300 rounded-2xl">
+                    <CardHeader>
+                      {post.tags && post.tags.length > 0 && (
+                        <Badge variant="outline" className="w-fit mb-2">{post.tags[0]}</Badge>
+                      )}
+                      <CardTitle className="text-xl text-foreground">{post.title}</CardTitle>
+                      <p className="text-xs text-muted-foreground">
+                        {new Date(post.published_at || post.created_at).toLocaleDateString()}
+                      </p>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground mb-4">{post.excerpt}</p>
+                      <Button variant="ghost" className="story-link px-0">
+                        Read more
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            )}
 
             {/* Newsletter signup section */}
             <div className="text-center py-16 bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 rounded-3xl border border-border/30">

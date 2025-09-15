@@ -9,6 +9,9 @@ import Mentoring from "./pages/Mentoring";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Blog from "./pages/Blog";
+import Auth from "./pages/Auth";
+import BlogAdmin from "./pages/BlogAdmin";
+import BlogEditor from "./pages/BlogEditor";
 import PreloadAssets from "@/components/PreloadAssets";
 
 const queryClient = new QueryClient();
@@ -26,6 +29,10 @@ const App = () => (
           <Route path="/mentoring" element={<Mentoring />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/auth" element={<Auth />} />
+          <Route path="/blog-admin" element={<BlogAdmin />} />
+          <Route path="/blog-editor" element={<BlogEditor />} />
+          <Route path="/blog-editor/:id" element={<BlogEditor />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
