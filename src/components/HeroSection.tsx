@@ -98,7 +98,7 @@ const HeroSection = () => {
                 className="w-12 h-12 rounded-full object-cover"
               />
               <div className="text-left">
-                <p className="text-sm text-muted-foreground">Founder of ORB AI</p>
+                <p className="text-sm text-muted-foreground">Founder of DEFEND INFO</p>
               </div>
             </div>
           </div>

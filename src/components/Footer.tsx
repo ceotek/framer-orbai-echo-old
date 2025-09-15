@@ -144,11 +144,11 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center justify-between py-8 px-6">
             {/* Logo and Copyright */}
             <div className="flex items-center space-x-4 mb-4 md:mb-0">
-              <img src={orbaiLogo} alt="ORB AI" className="h-8 w-8 filter invert" />
+              <img src={orbaiLogo} alt="DEFEND INFO" className="h-8 w-8 filter invert" />
               <div className="text-left">
-                <p className="font-bold">OrbAI</p>
+                <p className="font-bold">DEFEND INFO</p>
                 <p className="text-sm text-primary-foreground/60">
-                  © 2024 OrbAI. All rights reserved.
+                  © 2024 DEFEND INFO. All rights reserved.
                 </p>
               </div>
             </div>
