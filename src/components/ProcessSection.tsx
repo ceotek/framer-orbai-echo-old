@@ -29,7 +29,7 @@ const ProcessSection = () => {
       <div className="container-max">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <Badge variant="secondary" className="mb-4">
+          <Badge variant="secondary" className="mb-4 rounded-full shadow-medium px-4 py-2">
             PROCESS
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -47,7 +47,7 @@ const ProcessSection = () => {
               {/* Content */}
               <div className="flex-1 space-y-6">
                 <div className="flex items-center space-x-4">
-                  <div className="text-6xl font-bold text-primary/20">
+                  <div className="text-6xl font-bold text-primary/20 bg-primary/5 rounded-2xl p-4 shadow-medium">
                     {step.number}
                   </div>
                   <h3 className="text-3xl font-bold text-foreground">
@@ -61,7 +61,7 @@ const ProcessSection = () => {
 
               {/* Image */}
               <div className="flex-1">
-                <Card className="overflow-hidden shadow-medium">
+                <Card className="overflow-hidden shadow-strong rounded-2xl transform hover:-translate-y-2 transition-all duration-300">
                   <img 
                     src={step.image}
                     alt={step.title}

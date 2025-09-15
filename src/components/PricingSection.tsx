@@ -58,7 +58,7 @@ const PricingSection = () => {
       <div className="container-max">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <Badge variant="secondary" className="mb-4">
+          <Badge variant="secondary" className="mb-4 rounded-full shadow-medium px-4 py-2">
             PRICING
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -75,7 +75,7 @@ const PricingSection = () => {
             </span>
             <button
               onClick={() => setIsYearly(!isYearly)}
-              className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+              className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors shadow-medium ${
                 isYearly ? 'bg-primary' : 'bg-muted'
               }`}
             >
@@ -89,7 +89,7 @@ const PricingSection = () => {
               Yearly
             </span>
             {isYearly && (
-              <Badge variant="default" className="ml-2">
+              <Badge variant="default" className="ml-2 rounded-full shadow-medium">
                 30% off
               </Badge>
             )}
@@ -101,13 +101,13 @@ const PricingSection = () => {
           {plans.map((plan, index) => (
             <Card 
               key={index} 
-              className={`relative bg-gradient-card border-border shadow-soft hover:shadow-medium transition-all duration-300 ${
-                plan.popular ? 'ring-2 ring-primary shadow-strong' : ''
+              className={`relative bg-gradient-card border-border shadow-strong hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2 rounded-2xl ${
+                plan.popular ? 'ring-2 ring-primary' : ''
               }`}
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <Badge variant="default" className="px-4 py-1">
+                  <Badge variant="default" className="px-4 py-1 rounded-full shadow-medium">
                     Most Popular
                   </Badge>
                 </div>
@@ -135,7 +135,7 @@ const PricingSection = () => {
               <CardContent className="p-8 pt-0">
                 <Button 
                   size="lg" 
-                  className={`w-full mb-8 ${
+                  className={`w-full mb-8 rounded-full shadow-strong transform hover:-translate-y-0.5 transition-all duration-200 ${
                     plan.popular 
                       ? 'bg-primary text-primary-foreground hover:bg-primary/90' 
                       : 'bg-secondary text-secondary-foreground hover:bg-secondary/90'
@@ -147,7 +147,9 @@ const PricingSection = () => {
                 <ul className="space-y-4">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3">
-                      <Check className="w-5 h-5 text-primary flex-shrink-0" />
+                      <div className="p-1 bg-primary/10 rounded-full shadow-soft">
+                        <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                      </div>
                       <span className="text-foreground">{feature}</span>
                     </li>
                   ))}

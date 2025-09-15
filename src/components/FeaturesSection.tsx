@@ -33,7 +33,7 @@ const FeaturesSection = () => {
       <div className="container-max">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <Badge variant="secondary" className="mb-4">
+          <Badge variant="secondary" className="mb-4 rounded-full shadow-medium px-4 py-2">
             FEATURES
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -49,16 +49,16 @@ const FeaturesSection = () => {
           <img 
             src={aiVisualization}
             alt="AI Technology Visualization"
-            className="mx-auto max-w-full h-auto rounded-2xl shadow-strong"
+            className="mx-auto max-w-full h-auto rounded-2xl shadow-strong transform hover:-translate-y-2 transition-all duration-300"
           />
         </div>
 
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {features.map((feature, index) => (
-            <Card key={index} className="bg-background border-border shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1">
+            <Card key={index} className="bg-background border-border shadow-strong hover:shadow-strong transform hover:-translate-y-2 transition-all duration-300 rounded-2xl">
               <CardContent className="p-8">
-                <div className="text-primary mb-4">{feature.icon}</div>
+                <div className="text-primary mb-4 p-3 bg-primary/10 rounded-full w-fit shadow-medium">{feature.icon}</div>
                 <h3 className="text-2xl font-semibold text-foreground mb-4">
                   {feature.title}
                 </h3>
@@ -72,10 +72,10 @@ const FeaturesSection = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+          <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full shadow-strong transform hover:-translate-y-1 transition-all duration-200">
             Get Started
           </Button>
-          <Button size="lg" variant="outline">
+          <Button size="lg" variant="outline" className="rounded-full shadow-medium hover:shadow-strong transform hover:-translate-y-1 transition-all duration-200">
             See Our Services
           </Button>
         </div>

@@ -39,7 +39,7 @@ const ServicesSection = () => {
       <div className="container-max">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <Badge variant="secondary" className="mb-4">
+          <Badge variant="secondary" className="mb-4 rounded-full shadow-medium px-4 py-2">
             SERVICES
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -53,11 +53,11 @@ const ServicesSection = () => {
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="bg-gradient-card border-border shadow-soft hover:shadow-medium transition-all duration-300">
+            <Card key={index} className="bg-gradient-card border-border shadow-strong hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2 rounded-2xl">
               <CardContent className="p-8">
                 {/* Service Header */}
                 <div className="flex items-start space-x-4 mb-6">
-                  <div className="p-3 bg-primary/10 rounded-lg">
+                  <div className="p-3 bg-primary/10 rounded-full shadow-medium">
                     <img src={orbaiLogo} alt="Service Icon" className="w-6 h-6" />
                   </div>
                   <div className="flex-1">
@@ -78,7 +78,7 @@ const ServicesSection = () => {
                         key={btnIndex}
                         variant="outline" 
                         size="sm"
-                        className="w-full justify-start text-left"
+                        className="w-full justify-start text-left rounded-full shadow-soft hover:shadow-medium transform hover:-translate-y-0.5 transition-all duration-200"
                       >
                         {button}
                       </Button>
@@ -88,7 +88,7 @@ const ServicesSection = () => {
 
                 {service.interactive && service.chatInput && (
                   <div className="mt-6">
-                    <div className="bg-muted rounded-lg p-4 mb-3">
+                    <div className="bg-muted rounded-2xl p-4 mb-3 shadow-soft">
                       <p className="text-sm text-muted-foreground">
                         Type a message
                       </p>

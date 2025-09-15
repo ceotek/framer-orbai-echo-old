@@ -52,7 +52,7 @@ const ProjectsSection = () => {
       <div className="container-max">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <Badge variant="secondary" className="mb-4">
+          <Badge variant="secondary" className="mb-4 rounded-full shadow-medium px-4 py-2">
             PROJECTS
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -72,7 +72,7 @@ const ProjectsSection = () => {
                 variant={index === currentProject ? "default" : "outline"}
                 size="sm"
                 onClick={() => setCurrentProject(index)}
-                className="px-6"
+                className="px-6 rounded-full shadow-medium hover:shadow-strong transform hover:-translate-y-0.5 transition-all duration-200"
               >
                 PROJECT {index + 1}
               </Button>
@@ -81,12 +81,12 @@ const ProjectsSection = () => {
         </div>
 
         {/* Current Project Display */}
-        <Card className="bg-gradient-card border-border shadow-medium mb-8">
+        <Card className="bg-gradient-card border-border shadow-strong mb-8 rounded-2xl transform hover:-translate-y-1 transition-all duration-300">
           <CardContent className="p-12">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Project Content */}
               <div className="space-y-6">
-                <div className="text-8xl font-bold text-primary/20">
+                <div className="text-8xl font-bold text-primary/20 bg-primary/5 rounded-2xl p-4 w-fit shadow-medium">
                   {currentProjectData.id}
                 </div>
                 <h3 className="text-3xl md:text-4xl font-bold text-foreground leading-tight">
@@ -100,7 +100,7 @@ const ProjectsSection = () => {
               {/* Project Metrics */}
               <div className="space-y-8">
                 {currentProjectData.metrics.map((metric, index) => (
-                  <div key={index} className="text-center p-6 bg-background rounded-xl shadow-soft">
+                  <div key={index} className="text-center p-6 bg-background rounded-2xl shadow-strong border border-border transform hover:-translate-y-1 transition-all duration-300">
                     <div className="text-5xl md:text-6xl font-bold text-primary mb-2">
                       {metric.value}
                       <span className="text-3xl">{metric.unit}</span>
@@ -121,7 +121,7 @@ const ProjectsSection = () => {
             variant="outline"
             size="lg"
             onClick={prevProject}
-            className="px-8"
+            className="px-8 rounded-full shadow-medium hover:shadow-strong transform hover:-translate-y-0.5 transition-all duration-200"
           >
             <ChevronLeft className="w-5 h-5 mr-2" />
             Previous
@@ -130,7 +130,7 @@ const ProjectsSection = () => {
             variant="outline"
             size="lg"
             onClick={nextProject}
-            className="px-8"
+            className="px-8 rounded-full shadow-medium hover:shadow-strong transform hover:-translate-y-0.5 transition-all duration-200"
           >
             Next
             <ChevronRight className="w-5 h-5 ml-2" />
