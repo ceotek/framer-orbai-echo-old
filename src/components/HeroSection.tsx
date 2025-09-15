@@ -55,13 +55,13 @@ const HeroSection = () => {
               <div className="absolute inset-0 bg-black/20 rounded-full blur-sm scale-100 transform translate-y-2"></div>
               
               {/* Main icon container with ultra-realistic 3D effect */}
-              <div className="relative bg-gradient-to-br from-white via-gray-50 to-gray-100 rounded-full p-6 sm:p-8 shadow-icon-3d hover:shadow-icon-hover transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 border-2 border-white/50 backdrop-blur-sm">
+              <div className="relative bg-gradient-to-br from-white via-gray-50 to-gray-100 rounded-full p-8 sm:p-12 shadow-icon-3d hover:shadow-icon-hover transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 border-2 border-white/50 backdrop-blur-sm">
                 {/* Inner glow effect */}
-                <div className="absolute inset-3 bg-gradient-to-br from-white/60 to-transparent rounded-full blur-sm"></div>
+                <div className="absolute inset-4 bg-gradient-to-br from-white/60 to-transparent rounded-full blur-sm"></div>
                 
                 {/* Icon */}
                 <div className="relative z-10">
-                  <img src={diLogo} alt="DI Logo" className="h-20 w-20 sm:h-24 sm:w-24 object-contain transform hover:scale-110 transition-transform duration-300 drop-shadow-lg" />
+                  <img src={diLogo} alt="DI Logo" className="h-32 w-32 sm:h-40 sm:w-40 object-contain transform hover:scale-110 transition-transform duration-300 drop-shadow-lg" />
                 </div>
               </div>
             </div>
