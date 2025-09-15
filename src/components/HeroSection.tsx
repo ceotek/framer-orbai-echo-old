@@ -67,12 +67,12 @@ const HeroSection = () => {
 
           {/* Main Heading */}
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-foreground mb-4 sm:mb-6 tracking-tight">
-            DEFEND INFO
+            Cybersecurity Redefined
           </h1>
 
           {/* Subheading */}
           <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 sm:mb-12 leading-relaxed px-2 max-w-full">
-            Custom AI solutions, built for the innovators of tomorrow
+            Proactive. Adaptive. Relentless. Securing your digital presence when others fall short.
           </p>
 
           {/* CTA Buttons */}
@@ -89,7 +89,7 @@ const HeroSection = () => {
           {/* Testimonial */}
           <div className="bg-card rounded-2xl p-8 shadow-strong border border-border max-w-2xl mx-auto">
             <blockquote className="text-lg md:text-xl font-medium text-foreground mb-6 leading-relaxed">
-              "We harness your data, understand your audience, and use AI to help your brand rise above the noise. The best part? We execute, too."
+              "We excel in achieving what others consider unfeasible. Utilizing advanced technology and expert operatives, we secure evidence that others cannot obtain through complex tactics."
             </blockquote>
             <div className="flex items-center justify-center space-x-4">
               <img 

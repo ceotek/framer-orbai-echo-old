@@ -7,28 +7,28 @@ const ServicesSection = () => {
   const services = [
     {
       icon: <Lightbulb className="w-8 h-8" />,
-      title: "AI Strategy Consulting",
-      description: "Get expert guidance to implement AI solutions that drive business growth",
+      title: "Digital Investigations",
+      description: "High-profile investigations of white-collar crime and digital forensics with expert analysis",
       interactive: false
     },
     {
       icon: <PenTool className="w-8 h-8" />,
-      title: "Content Generation",
-      description: "We provide seamless content creation solutions that generate captivating, high-quality content in line with your brand's voice.",
+      title: "Digital Footprint Removal",
+      description: "We provide comprehensive digital footprint removal services to protect your privacy and reputation across all digital platforms.",
       interactive: true,
-      buttons: ["Continue writing", "Fix spelling", "Explain in detail", "Generate"]
+      buttons: ["Assess footprint", "Remove traces", "Monitor cleanup", "Generate report"]
     },
     {
       icon: <MessageSquare className="w-8 h-8" />,
-      title: "AI-Powered Chatbots",
-      description: "We develop AI-driven chatbots with advanced cognitive technologies to elevate customer support and automate business operations.",
+      title: "Threat Intelligence",
+      description: "We develop advanced threat intelligence systems to identify, analyze, and neutralize digital threats before they impact your organization.",
       interactive: true,
       chatInput: true
     },
     {
       icon: <Workflow className="w-8 h-8" />,
-      title: "Automated Workflows",
-      description: "Automate workflows to streamline tasks, boost efficiency, and save time",
+      title: "Digital Asset Recovery",
+      description: "Recover stolen digital assets and secure evidence that others cannot obtain through advanced techniques",
       interactive: false
     }
   ];
@@ -42,10 +42,10 @@ const ServicesSection = () => {
             SERVICES
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Our AI-Driven Services
+            Our Cybersecurity Services
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Leverage AI features that boost performance to your business.
+            Advanced cybersecurity solutions that deliver results in the most challenging scenarios.
           </p>
         </div>
 

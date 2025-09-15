@@ -8,23 +8,23 @@ const FeaturesSection = () => {
   const features = [
     {
       icon: <Brain className="w-8 h-8" />,
-      title: "Cutting-Edge AI",
-      description: "Deploy AI solutions that adapt quickly, learn fast, and scale with your business needs."
+      title: "Advanced Technology",
+      description: "Deploy cutting-edge cybersecurity technology that adapts quickly and scales with evolving digital threats."
     },
     {
       icon: <Zap className="w-8 h-8" />,
-      title: "Automated Workflows",
-      description: "Streamline tasks and boost efficiency with powerful, scalable AI-powered automation tools for growing teams and projects."
+      title: "Expert Operatives",
+      description: "Utilize our network of expert operatives with specialized skills in digital forensics and threat neutralization."
     },
     {
       icon: <BarChart3 className="w-8 h-8" />,
-      title: "Insightful Analytics",
-      description: "Gain deep, real-time data insights with advanced AI analytics to guide smarter strategies, decisions, and scalable business growth."
+      title: "Global Intelligence",
+      description: "Access comprehensive global intelligence networks to reveal concealed truths and provide critical insights."
     },
     {
       icon: <Headphones className="w-8 h-8" />,
-      title: "AI-Powered Support",
-      description: "Enhance customer experience with AI-driven virtual assistants available for support and engagement."
+      title: "24/7 Response Team",
+      description: "Round-the-clock cybersecurity response team available for immediate threat assessment and incident management."
     }
   ];
 
@@ -37,10 +37,10 @@ const FeaturesSection = () => {
             FEATURES
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            All features in 1 tool
+            Comprehensive Solutions
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Discover features that simplify workflows & grow your business.
+            Discover capabilities that secure your organization and neutralize complex threats.
           </p>
         </div>
 
@@ -72,12 +72,12 @@ const FeaturesSection = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-2xl shadow-strong transform hover:-translate-y-1 transition-all duration-300 h-11 py-3">
-            Get Started
-          </Button>
-          <Button size="lg" variant="outline" className="rounded-2xl shadow-medium hover:shadow-strong transform hover:-translate-y-1 transition-all duration-300 h-11 py-3">
-            See Our Services
-          </Button>
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-2xl shadow-strong transform hover:-translate-y-1 transition-all duration-300 h-11 py-3">
+              Secure Now
+            </Button>
+            <Button size="lg" variant="outline" className="rounded-2xl shadow-medium hover:shadow-strong transform hover:-translate-y-1 transition-all duration-300 h-11 py-3">
+              Contact Security Team
+            </Button>
         </div>
       </div>
     </section>

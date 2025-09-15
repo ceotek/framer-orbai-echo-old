@@ -6,30 +6,30 @@ const BenefitsSection = () => {
   const benefits = [
     {
       icon: <BarChart3 className="w-8 h-8" />,
-      title: "Real-Time Analytics",
-      description: "Stay ahead with accurate, real-time performance tracking"
+      title: "Digital Threat Intelligence",
+      description: "Advanced threat analysis and intelligence gathering to protect your organization"
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
-      title: "AI-Driven Growth",
-      description: "Make smarter moves with accurate, real-time business insights."
+      title: "Strategic Execution",
+      description: "Global influence through comprehensive, customized cybersecurity solutions."
     }
   ];
 
   const stats = [
-    { value: "20%", label: "Automation", type: "before" },
-    { value: "60%", label: "Cost", type: "after" }
+    { value: "24/7", label: "Protection", type: "before" },
+    { value: "100%", label: "Secure", type: "after" }
   ];
 
   const features = [
-    "Faster Innovation",
-    "Virtual Assistance", 
-    "Scalable Solutions",
-    "Personalized Experiences",
-    "Cost Effective",
-    "Real-Time Insights",
-    "Automation",
-    "Data-Driven Decisions"
+    "Digital Investigations",
+    "Threat Intelligence", 
+    "Asset Recovery",
+    "Footprint Removal",
+    "White-Collar Crime",
+    "Advanced Technology",
+    "Expert Operatives",
+    "International Network"
   ];
 
   return (
@@ -41,10 +41,10 @@ const BenefitsSection = () => {
             BENEFITS
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Why Choose Us
+            Strategic Advantages
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Partner with an AI agency delivering smart solutions.
+            Comprehensive cybersecurity solutions that deliver results when others fall short.
           </p>
         </div>
 
@@ -89,10 +89,10 @@ const BenefitsSection = () => {
               </div>
             </div>
             <h3 className="text-2xl font-semibold text-foreground mb-3">
-              Sync in real time
+              Real-time Intelligence
             </h3>
             <p className="text-muted-foreground">
-              connect with your team instantly to track progress and updates
+              Connect with our expert team instantly to track threats and coordinate response efforts
             </p>
           </CardContent>
         </Card>
