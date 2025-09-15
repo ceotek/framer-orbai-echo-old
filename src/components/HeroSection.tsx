@@ -64,12 +64,12 @@ const HeroSection = () => {
               <div className="absolute inset-0 bg-black/25 rounded-full blur-md scale-105 transform translate-y-2"></div>
               
               {/* Main icon container with subtle 3D effect */}
-              <div className="relative bg-black rounded-full overflow-hidden h-24 w-24 sm:h-[7.5rem] sm:w-[7.5rem] transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 border border-white/30 backdrop-blur-sm flex items-center justify-center shadow-[0_6px_24px_rgba(0,0,0,0.25),0_2px_8px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.3),0_3px_12px_rgba(0,0,0,0.2)]">
+              <div className="relative bg-black rounded-full overflow-hidden h-24 w-24 sm:h-[7.5rem] sm:w-[7.5rem] border border-white/30 backdrop-blur-sm flex items-center justify-center shadow-[0_6px_24px_rgba(0,0,0,0.25),0_2px_8px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.3),0_3px_12px_rgba(0,0,0,0.2)] transition-[transform,box-shadow] duration-300 hover:-translate-y-2 hover:scale-105">
                 {/* Inner glow effect - keep subtle without shrinking the image area */}
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-full"></div>
                 
                 {/* Icon */}
-                <img src={diLogo} alt="Defend Info logo" className="w-full h-full object-cover" />
+                <img src={diLogo} alt="Defend Info logo" className="w-full h-full object-cover" style={{ opacity: 1 }} />
               </div>
             </div>
           </div>
