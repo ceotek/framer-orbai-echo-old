@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
-import orbaiLogo from '@/assets/orbai-logo.png';
+import diLogo from '@/assets/di-logo.png';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -29,7 +29,7 @@ const Header = () => {
                 {/* Inner highlight */}
                 <div className="absolute inset-0.5 bg-gradient-to-br from-white/30 to-transparent rounded-lg blur-sm"></div>
                 
-                <img src={orbaiLogo} alt="ORB AI" className="relative z-10 h-8 w-8 transform group-hover:scale-110 transition-transform duration-300 opacity-90" />
+                <img src={diLogo} alt="DI Logo" className="relative z-10 h-8 w-8 transform group-hover:scale-110 transition-transform duration-300 object-contain" />
               </div>
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">OrbAI</span>

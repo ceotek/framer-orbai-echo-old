@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Sparkles } from 'lucide-react';
-import orbaiLogo from '@/assets/orbai-logo.png';
+import diLogo from '@/assets/di-logo.png';
 import founderPhoto from '@/assets/founder-photo.jpg';
 
 const HeroSection = () => {
@@ -60,7 +60,7 @@ const HeroSection = () => {
                 
                 {/* Icon */}
                 <div className="relative z-10">
-                  <img src={orbaiLogo} alt="ORB AI" className="h-12 w-12 sm:h-16 sm:w-16 filter brightness-0 opacity-90 transform hover:scale-110 transition-transform duration-300" />
+                  <img src={diLogo} alt="DI Logo" className="h-12 w-12 sm:h-16 sm:w-16 object-contain transform hover:scale-110 transition-transform duration-300" />
                 </div>
               </div>
             </div>
