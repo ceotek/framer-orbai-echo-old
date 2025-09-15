@@ -105,7 +105,7 @@ const TestimonialsSection = () => {
             variant="outline"
             size="lg"
             onClick={prevTestimonial}
-            className="rounded-full shadow-medium hover:shadow-strong transform hover:-translate-y-0.5 transition-all duration-200"
+            className="rounded-2xl shadow-medium hover:shadow-strong transform hover:-translate-y-0.5 transition-all duration-300 h-11 py-3"
           >
             <ChevronLeft className="w-5 h-5" />
           </Button>
@@ -113,7 +113,7 @@ const TestimonialsSection = () => {
             variant="outline"
             size="lg"
             onClick={nextTestimonial}
-            className="rounded-full shadow-medium hover:shadow-strong transform hover:-translate-y-0.5 transition-all duration-200"
+            className="rounded-2xl shadow-medium hover:shadow-strong transform hover:-translate-y-0.5 transition-all duration-300 h-11 py-3"
           >
             <ChevronRight className="w-5 h-5" />
           </Button>

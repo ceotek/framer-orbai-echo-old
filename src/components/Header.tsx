@@ -41,7 +41,7 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:block">
-            <Button size="sm" className="bg-gradient-to-r from-primary to-primary/90 text-primary-foreground hover:from-primary/90 hover:to-primary/80 rounded-full shadow-ultra hover:shadow-depth transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 backdrop-blur-glass border border-primary/20">
+            <Button size="sm" className="bg-gradient-to-r from-primary to-primary/90 text-primary-foreground hover:from-primary/90 hover:to-primary/80 rounded-2xl shadow-ultra hover:shadow-depth transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 backdrop-blur-glass border border-primary/20 h-11 py-3">
               Get Started
             </Button>
           </div>
@@ -71,7 +71,7 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
-              <Button size="sm" className="bg-gradient-to-r from-primary to-primary/90 text-primary-foreground hover:from-primary/90 hover:to-primary/80 mt-4 rounded-full shadow-ultra backdrop-blur-glass">
+              <Button size="sm" className="bg-gradient-to-r from-primary to-primary/90 text-primary-foreground hover:from-primary/90 hover:to-primary/80 mt-4 rounded-2xl shadow-ultra backdrop-blur-glass h-11 py-3">
                 Get Started
               </Button>
             </nav>

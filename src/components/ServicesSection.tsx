@@ -78,7 +78,7 @@ const ServicesSection = () => {
                         key={btnIndex}
                         variant="outline" 
                         size="sm"
-                        className="w-full justify-start text-left rounded-full shadow-soft hover:shadow-medium transform hover:-translate-y-0.5 transition-all duration-200"
+                        className="w-full justify-start text-left rounded-2xl shadow-soft hover:shadow-medium transform hover:-translate-y-0.5 transition-all duration-300 h-9 py-2"
                       >
                         {button}
                       </Button>

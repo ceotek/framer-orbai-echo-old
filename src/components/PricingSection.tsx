@@ -135,7 +135,7 @@ const PricingSection = () => {
               <CardContent className="p-8 pt-0">
                 <Button 
                   size="lg" 
-                  className={`w-full mb-8 rounded-full shadow-strong transform hover:-translate-y-0.5 transition-all duration-200 ${
+                  className={`w-full mb-8 rounded-2xl shadow-strong transform hover:-translate-y-0.5 transition-all duration-300 h-11 py-3 ${
                     plan.popular 
                       ? 'bg-primary text-primary-foreground hover:bg-primary/90' 
                       : 'bg-secondary text-secondary-foreground hover:bg-secondary/90'

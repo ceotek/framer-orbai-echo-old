@@ -72,10 +72,10 @@ const FeaturesSection = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full shadow-strong transform hover:-translate-y-1 transition-all duration-200">
+          <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-2xl shadow-strong transform hover:-translate-y-1 transition-all duration-300 h-11 py-3">
             Get Started
           </Button>
-          <Button size="lg" variant="outline" className="rounded-full shadow-medium hover:shadow-strong transform hover:-translate-y-1 transition-all duration-200">
+          <Button size="lg" variant="outline" className="rounded-2xl shadow-medium hover:shadow-strong transform hover:-translate-y-1 transition-all duration-300 h-11 py-3">
             See Our Services
           </Button>
         </div>

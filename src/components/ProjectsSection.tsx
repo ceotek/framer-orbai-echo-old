@@ -72,7 +72,7 @@ const ProjectsSection = () => {
                 variant={index === currentProject ? "default" : "outline"}
                 size="sm"
                 onClick={() => setCurrentProject(index)}
-                className="px-6 rounded-full shadow-medium hover:shadow-strong transform hover:-translate-y-0.5 transition-all duration-200"
+                className="px-6 rounded-2xl shadow-medium hover:shadow-strong transform hover:-translate-y-0.5 transition-all duration-300 h-9 py-2"
               >
                 PROJECT {index + 1}
               </Button>
@@ -121,7 +121,7 @@ const ProjectsSection = () => {
             variant="outline"
             size="lg"
             onClick={prevProject}
-            className="px-8 rounded-full shadow-medium hover:shadow-strong transform hover:-translate-y-0.5 transition-all duration-200"
+            className="px-8 rounded-2xl shadow-medium hover:shadow-strong transform hover:-translate-y-0.5 transition-all duration-300 h-11 py-3"
           >
             <ChevronLeft className="w-5 h-5 mr-2" />
             Previous
@@ -130,7 +130,7 @@ const ProjectsSection = () => {
             variant="outline"
             size="lg"
             onClick={nextProject}
-            className="px-8 rounded-full shadow-medium hover:shadow-strong transform hover:-translate-y-0.5 transition-all duration-200"
+            className="px-8 rounded-2xl shadow-medium hover:shadow-strong transform hover:-translate-y-0.5 transition-all duration-300 h-11 py-3"
           >
             Next
             <ChevronRight className="w-5 h-5 ml-2" />
