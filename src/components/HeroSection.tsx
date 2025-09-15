@@ -55,9 +55,9 @@ const HeroSection = () => {
               <div className="absolute inset-0 bg-black/20 rounded-full blur-sm scale-100 transform translate-y-2"></div>
               
               {/* Main icon container with ultra-realistic 3D effect */}
-              <div className="relative bg-gradient-to-br from-white via-gray-50 to-gray-100 rounded-full overflow-hidden h-24 w-24 sm:h-[7.5rem] sm:w-[7.5rem] shadow-icon-3d hover:shadow-icon-hover transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 border-2 border-white/50 backdrop-blur-sm">
+              <div className="relative bg-black rounded-full overflow-hidden h-24 w-24 sm:h-[7.5rem] sm:w-[7.5rem] shadow-icon-3d hover:shadow-icon-hover transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 border-2 border-white/50 backdrop-blur-sm">
                 {/* Inner glow effect - keep subtle without shrinking the image area */}
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/30 to-transparent rounded-full"></div>
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-full"></div>
                 
                 {/* Icon */}
                 <img src={diLogo} alt="Defend Info logo" className="absolute inset-0 w-full h-full object-cover" />
