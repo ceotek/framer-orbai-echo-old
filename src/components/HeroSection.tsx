@@ -40,8 +40,18 @@ const HeroSection = () => {
       <div className="container-max relative z-10 max-w-full">
         <div className="text-center max-w-4xl mx-auto">
           {/* Badge */}
-          <Badge variant="secondary" className="mb-6 sm:mb-8 px-4 py-2 text-sm font-medium rounded-full shadow-medium">
-            <Sparkles className="w-4 h-4 mr-2" />
+          <Badge variant="secondary" className="mb-6 sm:mb-8 px-4 py-2 text-sm font-medium rounded-full shadow-[0_8px_24px_rgba(0,0,0,0.15),0_2px_8px_rgba(0,0,0,0.1)] border border-border/40 backdrop-blur-sm">
+            <div className="relative mr-2">
+              {/* 3D shadow for sparkle icon */}
+              <div className="absolute inset-0 transform translate-x-0.5 translate-y-1">
+                <Sparkles className="w-4 h-4 text-black/30 blur-sm" />
+              </div>
+              <div className="absolute inset-0 transform translate-x-0.5 translate-y-0.5">
+                <Sparkles className="w-4 h-4 text-black/20" />
+              </div>
+              {/* Main sparkle icon */}
+              <Sparkles className="w-4 h-4 relative z-10" />
+            </div>
             AI AUTOMATION FOR BUSINESSES
           </Badge>
 
