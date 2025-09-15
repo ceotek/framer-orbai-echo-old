@@ -3,8 +3,10 @@ import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import diLogo from '@/assets/di-logo.png';
 import founderPhoto from '@/assets/founder-photo.jpg';
+import { useDecodedImage } from '@/hooks/useDecodedImage';
 
 const HeroSection = () => {
+  const { loaded: heroLogoReady, src: heroLogoUrl } = useDecodedImage(diLogo);
   return (
     <section className="pt-24 pb-16 px-4 sm:px-6 lg:py-20 lg:px-6 bg-gradient-hero relative overflow-hidden">
       {/* Geometric Background Pattern */}
@@ -70,10 +72,10 @@ const HeroSection = () => {
                 
                 {/* Icon as background to avoid decode flicker on desktop */}
                 <div
-                  className="w-full h-full bg-center bg-no-repeat bg-contain block"
+                  className={`w-full h-full bg-center bg-no-repeat bg-contain block ${heroLogoReady ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
                   role="img"
                   aria-label="Defend Info logo"
-                  style={{ backgroundImage: `url(${diLogo})`, WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
+                  style={{ backgroundImage: heroLogoReady ? `url(${heroLogoUrl})` : 'none', WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden' }}
                 />
               </div>
             </div>

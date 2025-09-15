@@ -2,14 +2,17 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import diLogo from '@/assets/di-logo.png';
+import { useDecodedImage } from '@/hooks/useDecodedImage';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { loaded: logoReady, src: logoUrl } = useDecodedImage(diLogo);
 
   const navItems = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
     { name: 'Mentoring', href: '/mentoring' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Contact Us', href: '/contact' },
   ];
 
@@ -28,10 +31,10 @@ const Header = () => {
                 {/* Inner highlight */}
                 <div className="absolute inset-0.5 bg-gradient-to-br from-white/30 to-transparent rounded-lg blur-sm"></div>
                 <div
-                  className="relative z-10 h-10 w-10 transform-gpu group-hover:scale-110 transition-transform duration-300"
+                  className={`relative z-10 h-10 w-10 ${logoReady ? 'opacity-100' : 'opacity-0'} transform-gpu group-hover:scale-110 transition-[transform,opacity] duration-300`}
                   role="img"
                   aria-label="DI Logo"
-                  style={{ backgroundImage: `url(${diLogo})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
+                  style={{ backgroundImage: logoReady ? `url(${logoUrl})` : 'none', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden' }}
                 />
               </div>
             </div>
