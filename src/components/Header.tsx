@@ -7,6 +7,7 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
+    { name: 'Home', href: '/' },
     { name: 'Features', href: '#features' },
     { name: 'Pricing', href: '#pricing' },
     { name: 'Services', href: '#services' },
@@ -20,7 +21,7 @@ const Header = () => {
       <div className="container-max">
         <div className="flex items-center justify-between h-16 px-4 sm:px-6">
           {/* Logo */}
-          <div className="flex items-center space-x-2 group">
+          <a href="/" className="flex items-center space-x-2 group">
             <div className="relative">
               {/* Ultra-realistic 3D shadow for header logo */}
               <div className="absolute inset-0 bg-gradient-to-br from-gray-400/30 to-gray-600/30 rounded-xl blur-md opacity-25 scale-105 transform translate-y-1"></div>
@@ -34,7 +35,7 @@ const Header = () => {
               </div>
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">DEFEND INFO</span>
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-3">
