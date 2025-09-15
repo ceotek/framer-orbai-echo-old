@@ -25,8 +25,14 @@ const Header = () => {
               <div className="relative p-1 rounded-xl bg-black shadow-glass hover:shadow-glass-hover transition-all duration-300 border border-white/20 backdrop-blur-sm">
                 <img
                   src={diLogo}
-                  alt="DI Logo"
-                  className="relative z-10 h-10 w-10 object-contain group-hover:scale-105 transition-transform duration-300"
+                  alt="DEFEND INFO logo"
+                  width={40}
+                  height={40}
+                  loading="eager"
+                  decoding="sync"
+                  draggable={false}
+                  className="relative z-10 h-10 w-10 object-contain select-none"
+                  style={{ WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
                 />
               </div>
             </div>

@@ -213,7 +213,7 @@
   }
 
   /* Prevent all images and media from exceeding viewport width */
-  img, video, canvas, svg, iframe {
+  img, video, canvas, iframe {
     max-width: 100%;
     height: auto;
   }
