@@ -25,12 +25,12 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-4">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-200 rounded-full px-3 py-2 bg-card shadow-soft hover:shadow-medium border border-border/50"
               >
                 {item.name}
               </a>
@@ -39,7 +39,7 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:block">
-            <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">
+            <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full shadow-strong transform hover:-translate-y-0.5 transition-transform">
               Get Started
             </Button>
           </div>

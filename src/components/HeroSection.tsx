@@ -40,14 +40,14 @@ const HeroSection = () => {
       <div className="container-max relative z-10 max-w-full">
         <div className="text-center max-w-4xl mx-auto">
           {/* Badge */}
-          <Badge variant="secondary" className="mb-6 sm:mb-8 px-4 py-2 text-sm font-medium">
+          <Badge variant="secondary" className="mb-6 sm:mb-8 px-4 py-2 text-sm font-medium rounded-full shadow-medium">
             <Sparkles className="w-4 h-4 mr-2" />
             AI AUTOMATION FOR BUSINESSES
           </Badge>
 
           {/* Logo */}
           <div className="flex items-center justify-center mb-6 sm:mb-8">
-            <div className="bg-primary rounded-full p-4 sm:p-6 shadow-strong">
+            <div className="bg-primary rounded-full p-4 sm:p-6 shadow-strong border border-border">
               <img src={orbaiLogo} alt="ORB AI" className="h-12 w-12 sm:h-16 sm:w-16 filter invert" />
             </div>
           </div>
@@ -64,17 +64,17 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-row gap-2 sm:gap-4 justify-center mb-12 sm:mb-16 px-2 max-w-full">
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-4 sm:px-6 py-3 flex-1 max-w-[180px] text-sm sm:text-base shadow-[0_8px_16px_rgba(0,0,0,0.3)] hover:shadow-[0_12px_24px_rgba(0,0,0,0.4)] transform hover:-translate-y-1 transition-all duration-200 border-0 rounded-full">
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-4 sm:px-6 py-3 flex-1 max-w-[180px] text-sm sm:text-base shadow-strong hover:shadow-strong transform hover:-translate-y-1 transition-all duration-200 border-0 rounded-full">
               Get Template
               <ArrowRight className="ml-1 sm:ml-2 h-4 w-4 sm:h-5 sm:w-5" />
             </Button>
-            <Button size="lg" variant="secondary" className="px-4 sm:px-6 py-3 flex-1 max-w-[180px] text-sm sm:text-base shadow-[0_6px_14px_rgba(0,0,0,0.15)] hover:shadow-[0_10px_20px_rgba(0,0,0,0.25)] transform hover:-translate-y-1 transition-all duration-200 border-0 rounded-full bg-white/90 hover:bg-white">
+            <Button size="lg" variant="secondary" className="px-4 sm:px-6 py-3 flex-1 max-w-[180px] text-sm sm:text-base shadow-medium hover:shadow-strong transform hover:-translate-y-1 transition-all duration-200 border-0 rounded-full">
               See Our Services
             </Button>
           </div>
 
           {/* Testimonial */}
-          <div className="bg-card rounded-2xl p-8 shadow-medium border border-border max-w-2xl mx-auto">
+          <div className="bg-card rounded-2xl p-8 shadow-strong border border-border max-w-2xl mx-auto">
             <blockquote className="text-lg md:text-xl font-medium text-foreground mb-6 leading-relaxed">
               "We harness your data, understand your audience, and use AI to help your brand rise above the noise. The best part? We execute, too."
             </blockquote>
