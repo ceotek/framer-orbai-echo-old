@@ -63,15 +63,15 @@ const HeroSection = () => {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-12 sm:mb-16 px-4">
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3">
-              Get Template
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button size="lg" variant="secondary" className="px-8 py-3">
-              See Our Services
-            </Button>
-          </div>
+            <div className="flex flex-row gap-3 sm:gap-4 justify-center mb-12 sm:mb-16 px-2">
+              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 flex-1 max-w-[200px]">
+                Get Template
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              <Button size="lg" variant="secondary" className="px-6 py-3 flex-1 max-w-[200px]">
+                See Our Services
+              </Button>
+            </div>
 
           {/* Testimonial */}
           <div className="bg-card rounded-2xl p-8 shadow-medium border border-border max-w-2xl mx-auto">
