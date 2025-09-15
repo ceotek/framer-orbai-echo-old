@@ -209,7 +209,6 @@
   .container-max {
     @apply max-w-7xl mx-auto;
     width: 100%;
-    overflow-x: hidden;
   }
 
   /* Prevent all images and media from exceeding viewport width */
@@ -218,9 +217,5 @@
     height: auto;
   }
 
-  /* Ensure all containers respect viewport boundaries */
-  div, section, article, main, header, footer {
-    max-width: 100vw;
-    overflow-x: hidden;
-  }
+  /* Removed global overflow clipping that caused shadows/icons cut off */
 }

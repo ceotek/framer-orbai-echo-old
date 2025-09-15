@@ -6,7 +6,7 @@ import founderPhoto from '@/assets/founder-photo.jpg';
 
 const HeroSection = () => {
   return (
-    <section className="pt-24 pb-16 px-4 sm:px-6 lg:py-20 lg:px-6 bg-gradient-hero relative overflow-hidden">
+    <section className="pt-24 pb-16 px-4 sm:px-6 lg:py-20 lg:px-6 bg-gradient-hero relative overflow-visible">
       {/* Geometric Background Pattern - Constrained to prevent overflow */}
       <div className="absolute inset-0 opacity-30 overflow-hidden max-w-full">
         {/* Large Circle Ring */}
