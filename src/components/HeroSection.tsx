@@ -48,14 +48,14 @@ const HeroSection = () => {
           {/* Logo */}
           <div className="flex items-center justify-center mb-6 sm:mb-8">
             <div className="relative">
-              {/* Realistic 3D shadow base - multiple layers for natural depth */}
-              <div className="absolute inset-0 bg-black/8 rounded-full blur-2xl scale-125 transform translate-x-1 translate-y-6"></div>
-              <div className="absolute inset-0 bg-black/12 rounded-full blur-xl scale-115 transform translate-x-0.5 translate-y-4"></div>
-              <div className="absolute inset-0 bg-black/15 rounded-full blur-lg scale-108 transform translate-y-2"></div>
-              <div className="absolute inset-0 bg-black/20 rounded-full blur-md scale-102 transform translate-y-1"></div>
+              {/* Strong 3D shadow base - highly visible depth */}
+              <div className="absolute inset-0 bg-black/40 rounded-full blur-3xl scale-130 transform translate-x-2 translate-y-8"></div>
+              <div className="absolute inset-0 bg-black/50 rounded-full blur-2xl scale-120 transform translate-x-1.5 translate-y-6"></div>
+              <div className="absolute inset-0 bg-black/60 rounded-full blur-xl scale-110 transform translate-x-1 translate-y-4"></div>
+              <div className="absolute inset-0 bg-black/35 rounded-full blur-lg scale-105 transform translate-x-0.5 translate-y-2"></div>
               
-              {/* Main icon container with ultra-realistic 3D effect */}
-              <div className="relative bg-black rounded-full overflow-hidden h-24 w-24 sm:h-[7.5rem] sm:w-[7.5rem] transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 border border-white/30 backdrop-blur-sm flex items-center justify-center shadow-[0_8px_32px_rgba(0,0,0,0.3),0_2px_8px_rgba(0,0,0,0.2)] hover:shadow-[0_12px_48px_rgba(0,0,0,0.4),0_4px_12px_rgba(0,0,0,0.3)]">
+              {/* Main icon container with dramatic 3D effect */}
+              <div className="relative bg-black rounded-full overflow-hidden h-24 w-24 sm:h-[7.5rem] sm:w-[7.5rem] transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 border border-white/40 backdrop-blur-sm flex items-center justify-center shadow-[0_12px_48px_rgba(0,0,0,0.6),0_4px_16px_rgba(0,0,0,0.4),0_2px_8px_rgba(0,0,0,0.3)] hover:shadow-[0_16px_64px_rgba(0,0,0,0.7),0_6px_24px_rgba(0,0,0,0.5),0_3px_12px_rgba(0,0,0,0.4)]">
                 {/* Inner glow effect - keep subtle without shrinking the image area */}
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-full"></div>
                 
