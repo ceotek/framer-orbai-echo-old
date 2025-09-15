@@ -69,7 +69,7 @@ const HeroSection = () => {
 
           {/* Main Heading */}
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-foreground mb-4 sm:mb-6 tracking-tight">
-            ORB AI
+            DEFEND INFO
           </h1>
 
           {/* Subheading */}
