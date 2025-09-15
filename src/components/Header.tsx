@@ -15,22 +15,24 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-ultra border-b border-border/60 shadow-glass">
       <div className="container-max">
         <div className="flex items-center justify-between h-16 px-4 sm:px-6">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <img src={orbaiLogo} alt="ORB AI" className="h-8 w-8" />
-            <span className="text-xl font-bold text-foreground">OrbAI</span>
+          <div className="flex items-center space-x-2 group">
+            <div className="relative p-1 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 shadow-glass">
+              <img src={orbaiLogo} alt="ORB AI" className="h-8 w-8 transform group-hover:scale-110 transition-transform duration-300" />
+            </div>
+            <span className="text-xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">OrbAI</span>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-4">
+          <nav className="hidden md:flex items-center space-x-3">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200 rounded-full px-3 py-2 bg-card shadow-soft hover:shadow-medium border border-border/50"
+                className="text-muted-foreground hover:text-foreground transition-all duration-300 rounded-full px-4 py-2 bg-card/60 backdrop-blur-glass shadow-glass hover:shadow-glass-hover border border-border/40 hover:border-border/60 transform hover:-translate-y-0.5 hover:scale-[1.02]"
               >
                 {item.name}
               </a>
@@ -39,7 +41,7 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:block">
-            <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full shadow-strong transform hover:-translate-y-0.5 transition-transform">
+            <Button size="sm" className="bg-gradient-to-r from-primary to-primary/90 text-primary-foreground hover:from-primary/90 hover:to-primary/80 rounded-full shadow-ultra hover:shadow-depth transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 backdrop-blur-glass border border-primary/20">
               Get Started
             </Button>
           </div>
@@ -48,7 +50,7 @@ const Header = () => {
           <Button
             variant="ghost"
             size="sm"
-            className="md:hidden"
+            className="md:hidden shadow-glass"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -57,19 +59,19 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-background border-t border-border">
-            <nav className="flex flex-col space-y-4 px-6 py-4">
+          <div className="md:hidden bg-background/90 backdrop-blur-ultra border-t border-border/60 shadow-glass">
+            <nav className="flex flex-col space-y-4 px-6 py-6">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+                  className="text-muted-foreground hover:text-foreground transition-all duration-300 p-3 rounded-xl bg-card/40 backdrop-blur-glass shadow-glass hover:shadow-glass-hover border border-border/30"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
-              <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 mt-4">
+              <Button size="sm" className="bg-gradient-to-r from-primary to-primary/90 text-primary-foreground hover:from-primary/90 hover:to-primary/80 mt-4 rounded-full shadow-ultra backdrop-blur-glass">
                 Get Started
               </Button>
             </nav>

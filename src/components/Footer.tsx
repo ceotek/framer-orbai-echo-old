@@ -40,39 +40,39 @@ const Footer = () => {
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
+            <Card className="bg-white/10 backdrop-blur-ultra border border-white/20 shadow-ultra hover:shadow-depth transition-all duration-500 transform hover:-translate-y-2">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-6 text-white">
+                <h3 className="text-2xl font-bold mb-6 text-white bg-gradient-to-r from-white to-white/90 bg-clip-text text-transparent">
                   Send us a message
                 </h3>
                 <form className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <Input 
                       placeholder="First Name"
-                      className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
+                      className="bg-white/15 backdrop-blur-glass border-white/30 text-white placeholder:text-white/70 shadow-glass hover:shadow-glass-hover focus:shadow-glass-hover transition-all duration-300"
                     />
                     <Input 
                       placeholder="Last Name"
-                      className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
+                      className="bg-white/15 backdrop-blur-glass border-white/30 text-white placeholder:text-white/70 shadow-glass hover:shadow-glass-hover focus:shadow-glass-hover transition-all duration-300"
                     />
                   </div>
                   <Input 
                     type="email"
                     placeholder="Email Address"
-                    className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
+                    className="bg-white/15 backdrop-blur-glass border-white/30 text-white placeholder:text-white/70 shadow-glass hover:shadow-glass-hover focus:shadow-glass-hover transition-all duration-300"
                   />
                   <Input 
                     placeholder="Company"
-                    className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
+                    className="bg-white/15 backdrop-blur-glass border-white/30 text-white placeholder:text-white/70 shadow-glass hover:shadow-glass-hover focus:shadow-glass-hover transition-all duration-300"
                   />
                   <Textarea 
                     placeholder="Tell us about your project..."
                     rows={5}
-                    className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
+                    className="bg-white/15 backdrop-blur-glass border-white/30 text-white placeholder:text-white/70 shadow-glass hover:shadow-glass-hover focus:shadow-glass-hover transition-all duration-300"
                   />
                   <Button 
                     size="lg" 
-                    className="w-full bg-white text-primary hover:bg-white/90"
+                    className="w-full bg-gradient-to-r from-white to-white/95 text-primary hover:from-white/95 hover:to-white/90 shadow-ultra hover:shadow-depth transform hover:-translate-y-1 transition-all duration-300"
                   >
                     Send Message
                   </Button>
@@ -123,7 +123,7 @@ const Footer = () => {
                       key={index}
                       variant="outline"
                       size="icon"
-                      className="bg-white/10 border-white/20 text-white hover:bg-white/20"
+                      className="bg-white/15 backdrop-blur-glass border-white/30 text-white hover:bg-white/25 shadow-glass hover:shadow-glass-hover transform hover:-translate-y-0.5 transition-all duration-300"
                       asChild
                     >
                       <a href={social.href} aria-label={social.name}>

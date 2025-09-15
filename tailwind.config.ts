@@ -65,6 +65,15 @@ export default {
         'soft': 'var(--shadow-soft)',
         'medium': 'var(--shadow-medium)',
         'strong': 'var(--shadow-strong)',
+        'glass': 'var(--shadow-glass)',
+        'glass-hover': 'var(--shadow-glass-hover)',
+        'ultra': 'var(--shadow-ultra)',
+        'depth': 'var(--shadow-depth)',
+      },
+      backdropBlur: {
+        'glass': 'var(--blur-glass)',
+        'ultra': 'var(--blur-ultra)',
+        'extreme': 'var(--blur-extreme)',
       },
       transitionTimingFunction: {
         'smooth': 'var(--transition-smooth)',

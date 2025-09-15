@@ -11,9 +11,12 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background overflow-x-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-accent/5 overflow-x-hidden relative">
+      {/* Ultra-realistic glassmorphism overlay */}
+      <div className="fixed inset-0 bg-gradient-to-br from-transparent via-white/[0.02] to-primary/[0.03] pointer-events-none z-0"></div>
+      
       <Header />
-      <main className="overflow-x-hidden">
+      <main className="overflow-x-hidden relative z-10">
         <HeroSection />
         <BenefitsSection />
         <FeaturesSection />

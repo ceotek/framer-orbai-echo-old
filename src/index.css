@@ -48,10 +48,41 @@
     --gradient-hero: linear-gradient(135deg, hsl(var(--brand-light)), hsl(var(--brand-gray)));
     --gradient-card: linear-gradient(145deg, hsl(var(--background)), hsl(var(--brand-gray)));
     
-    /* Shadows */
+    /* Enhanced 3D Shadows */
     --shadow-soft: 0 2px 8px -2px hsl(var(--brand-primary) / 0.1);
     --shadow-medium: 0 8px 25px -8px hsl(var(--brand-primary) / 0.15);
     --shadow-strong: 0 20px 40px -12px hsl(var(--brand-primary) / 0.25);
+    
+    /* Ultra-Realistic Apple-Style Effects */
+    --shadow-glass: 
+      0 4px 20px rgba(0, 0, 0, 0.15),
+      0 1px 4px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3),
+      inset 0 0 1px rgba(255, 255, 255, 0.2);
+      
+    --shadow-glass-hover: 
+      0 8px 40px rgba(0, 0, 0, 0.25),
+      0 4px 12px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4),
+      inset 0 0 2px rgba(255, 255, 255, 0.3);
+      
+    --shadow-ultra: 
+      0 32px 80px rgba(0, 0, 0, 0.4),
+      0 16px 40px rgba(0, 0, 0, 0.3),
+      0 8px 20px rgba(0, 0, 0, 0.2),
+      inset 0 2px 4px rgba(255, 255, 255, 0.5),
+      inset 0 0 3px rgba(255, 255, 255, 0.3);
+      
+    --shadow-depth: 
+      0 48px 100px rgba(0, 0, 0, 0.5),
+      0 24px 50px rgba(0, 0, 0, 0.4),
+      0 12px 25px rgba(0, 0, 0, 0.3),
+      inset 0 3px 6px rgba(255, 255, 255, 0.6),
+      inset 0 1px 2px rgba(255, 255, 255, 0.4);
+      
+    --blur-glass: blur(16px);
+    --blur-ultra: blur(24px);
+    --blur-extreme: blur(32px);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -107,6 +138,19 @@
     --brand-secondary: 0 0% 63%;
     --brand-light: 0 0% 9%;
     --brand-gray: 0 0% 14%;
+    
+    /* Enhanced Dark Mode Glassmorphism */
+    --shadow-glass: 
+      0 4px 20px rgba(0, 0, 0, 0.6),
+      0 1px 4px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      inset 0 0 1px rgba(255, 255, 255, 0.05);
+      
+    --shadow-glass-hover: 
+      0 8px 40px rgba(0, 0, 0, 0.7),
+      0 4px 12px rgba(0, 0, 0, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15),
+      inset 0 0 2px rgba(255, 255, 255, 0.1);
   }
 }
 
