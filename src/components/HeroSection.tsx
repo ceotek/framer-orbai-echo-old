@@ -61,7 +61,7 @@ const HeroSection = () => {
                 
                 {/* Icon */}
                 <div className="relative z-10">
-                  <img src={diLogo} alt="DI Logo" className="h-16 w-16 sm:h-20 sm:w-20 object-contain transform hover:scale-110 transition-transform duration-300 drop-shadow-lg" />
+                  <img src={diLogo} alt="DI Logo" className="h-20 w-20 sm:h-24 sm:w-24 object-contain transform hover:scale-110 transition-transform duration-300 drop-shadow-lg" />
                 </div>
               </div>
             </div>

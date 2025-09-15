@@ -22,15 +22,14 @@ const Header = () => {
           <div className="flex items-center space-x-2 group">
             <div className="relative">
               {/* Ultra-realistic 3D shadow for header logo */}
-              <div className="absolute inset-0 bg-gradient-to-br from-gray-400/60 to-gray-600/60 rounded-xl blur-lg opacity-50 scale-110 transform translate-y-2"></div>
-              <div className="absolute inset-0 bg-black/30 rounded-xl blur-sm scale-105 transform translate-y-1"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-400/30 to-gray-600/30 rounded-xl blur-md opacity-25 scale-105 transform translate-y-1"></div>
               
               {/* Main logo container */}
               <div className="relative p-1 rounded-xl bg-gradient-to-br from-white via-primary/10 to-primary/20 shadow-icon-3d hover:shadow-icon-hover transition-all duration-300 border border-white/20 backdrop-blur-sm">
                 {/* Inner highlight */}
                 <div className="absolute inset-0.5 bg-gradient-to-br from-white/30 to-transparent rounded-lg blur-sm"></div>
                 
-                <img src={diLogo} alt="DI Logo" className="relative z-10 h-10 w-10 transform group-hover:scale-110 transition-transform duration-300 object-contain drop-shadow-md" />
+                <img src={diLogo} alt="DI Logo" className="relative z-10 h-10 w-10 transform group-hover:scale-110 transition-transform duration-300 object-contain" />
               </div>
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">OrbAI</span>
