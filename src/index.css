@@ -80,6 +80,27 @@
       inset 0 3px 6px rgba(255, 255, 255, 0.6),
       inset 0 1px 2px rgba(255, 255, 255, 0.4);
       
+    /* Ultra-Realistic 3D Icon Effects */
+    --shadow-icon-3d: 
+      0 60px 120px rgba(0, 0, 0, 0.6),
+      0 32px 64px rgba(0, 0, 0, 0.5),
+      0 16px 32px rgba(0, 0, 0, 0.4),
+      0 8px 16px rgba(0, 0, 0, 0.3),
+      0 4px 8px rgba(0, 0, 0, 0.2),
+      inset 0 4px 8px rgba(255, 255, 255, 0.7),
+      inset 0 2px 4px rgba(255, 255, 255, 0.5),
+      inset 0 1px 2px rgba(255, 255, 255, 0.3);
+      
+    --shadow-icon-hover: 
+      0 80px 160px rgba(0, 0, 0, 0.7),
+      0 40px 80px rgba(0, 0, 0, 0.6),
+      0 20px 40px rgba(0, 0, 0, 0.5),
+      0 10px 20px rgba(0, 0, 0, 0.4),
+      0 5px 10px rgba(0, 0, 0, 0.3),
+      inset 0 6px 12px rgba(255, 255, 255, 0.8),
+      inset 0 3px 6px rgba(255, 255, 255, 0.6),
+      inset 0 1px 3px rgba(255, 255, 255, 0.4);
+      
     --blur-glass: blur(16px);
     --blur-ultra: blur(24px);
     --blur-extreme: blur(32px);
@@ -151,6 +172,27 @@
       0 4px 12px rgba(0, 0, 0, 0.5),
       inset 0 1px 0 rgba(255, 255, 255, 0.15),
       inset 0 0 2px rgba(255, 255, 255, 0.1);
+      
+    /* Ultra-Realistic 3D Icon Effects - Dark Mode */
+    --shadow-icon-3d: 
+      0 60px 120px rgba(0, 0, 0, 0.9),
+      0 32px 64px rgba(0, 0, 0, 0.8),
+      0 16px 32px rgba(0, 0, 0, 0.7),
+      0 8px 16px rgba(0, 0, 0, 0.6),
+      0 4px 8px rgba(0, 0, 0, 0.5),
+      inset 0 4px 8px rgba(255, 255, 255, 0.2),
+      inset 0 2px 4px rgba(255, 255, 255, 0.15),
+      inset 0 1px 2px rgba(255, 255, 255, 0.1);
+      
+    --shadow-icon-hover: 
+      0 80px 160px rgba(0, 0, 0, 0.95),
+      0 40px 80px rgba(0, 0, 0, 0.9),
+      0 20px 40px rgba(0, 0, 0, 0.8),
+      0 10px 20px rgba(0, 0, 0, 0.7),
+      0 5px 10px rgba(0, 0, 0, 0.6),
+      inset 0 6px 12px rgba(255, 255, 255, 0.25),
+      inset 0 3px 6px rgba(255, 255, 255, 0.2),
+      inset 0 1px 3px rgba(255, 255, 255, 0.15);
   }
 }
 

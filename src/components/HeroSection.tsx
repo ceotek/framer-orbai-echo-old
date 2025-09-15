@@ -47,8 +47,22 @@ const HeroSection = () => {
 
           {/* Logo */}
           <div className="flex items-center justify-center mb-6 sm:mb-8">
-            <div className="bg-primary rounded-full p-4 sm:p-6 shadow-strong border border-border">
-              <img src={orbaiLogo} alt="ORB AI" className="h-12 w-12 sm:h-16 sm:w-16 filter invert" />
+            <div className="relative">
+              {/* Ultra-realistic 3D shadow base */}
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-300 to-gray-500 rounded-full blur-xl opacity-60 scale-110 transform translate-y-6"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full blur-lg opacity-40 scale-105 transform translate-y-4"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-500 to-gray-700 rounded-full blur-md opacity-20 scale-102 transform translate-y-2"></div>
+              
+              {/* Main icon container with ultra-realistic 3D effect */}
+              <div className="relative bg-gradient-to-br from-white via-gray-50 to-gray-100 rounded-full p-4 sm:p-6 shadow-icon-3d hover:shadow-icon-hover transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 border-2 border-white/50 backdrop-blur-sm">
+                {/* Inner glow effect */}
+                <div className="absolute inset-2 bg-gradient-to-br from-white/60 to-transparent rounded-full blur-sm"></div>
+                
+                {/* Icon */}
+                <div className="relative z-10">
+                  <img src={orbaiLogo} alt="ORB AI" className="h-12 w-12 sm:h-16 sm:w-16 filter brightness-0 opacity-90 transform hover:scale-110 transition-transform duration-300" />
+                </div>
+              </div>
             </div>
           </div>
 

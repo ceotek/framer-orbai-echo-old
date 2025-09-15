@@ -57,8 +57,21 @@ const ServicesSection = () => {
               <CardContent className="p-8">
                 {/* Service Header */}
                 <div className="flex items-start space-x-4 mb-6">
-                  <div className="p-3 bg-primary/10 rounded-full shadow-medium">
-                    <img src={orbaiLogo} alt="Service Icon" className="w-6 h-6" />
+                  <div className="relative flex-shrink-0">
+                    {/* Ultra-realistic 3D shadow base for service icons */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-gray-300/60 to-gray-500/60 rounded-full blur-lg opacity-40 scale-110 transform translate-y-3"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-gray-400/40 to-gray-600/40 rounded-full blur-md opacity-30 scale-105 transform translate-y-2"></div>
+                    
+                    {/* Main icon container */}
+                    <div className="relative bg-gradient-to-br from-white via-primary/5 to-primary/10 rounded-full p-3 shadow-icon-3d hover:shadow-icon-hover transition-all duration-400 transform hover:-translate-y-1 hover:scale-105 border border-white/30 backdrop-blur-sm">
+                      {/* Inner highlight */}
+                      <div className="absolute inset-1 bg-gradient-to-br from-white/40 to-transparent rounded-full blur-sm"></div>
+                      
+                      {/* Icon */}
+                      <div className="relative z-10">
+                        <img src={orbaiLogo} alt="Service Icon" className="w-6 h-6 opacity-80 transform hover:scale-110 transition-transform duration-300" />
+                      </div>
+                    </div>
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-semibold text-foreground mb-2">

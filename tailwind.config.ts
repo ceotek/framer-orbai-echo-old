@@ -69,6 +69,8 @@ export default {
         'glass-hover': 'var(--shadow-glass-hover)',
         'ultra': 'var(--shadow-ultra)',
         'depth': 'var(--shadow-depth)',
+        'icon-3d': 'var(--shadow-icon-3d)',
+        'icon-hover': 'var(--shadow-icon-hover)',
       },
       backdropBlur: {
         'glass': 'var(--blur-glass)',
