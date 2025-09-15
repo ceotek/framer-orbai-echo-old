@@ -49,10 +49,9 @@ const HeroSection = () => {
           <div className="flex items-center justify-center mb-6 sm:mb-8">
             <div className="relative">
               {/* Ultra-realistic 3D shadow base */}
-              <div className="absolute inset-0 bg-gradient-to-br from-gray-300 to-gray-500 rounded-full blur-xl opacity-80 scale-115 transform translate-y-8"></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full blur-lg opacity-60 scale-110 transform translate-y-6"></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-gray-500 to-gray-700 rounded-full blur-md opacity-40 scale-105 transform translate-y-4"></div>
-              <div className="absolute inset-0 bg-black/20 rounded-full blur-sm scale-100 transform translate-y-2"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-300 to-gray-500 rounded-full blur-lg opacity-30 scale-110 transform translate-y-4"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full blur-md opacity-25 scale-105 transform translate-y-3"></div>
+              <div className="absolute inset-0 bg-black/10 rounded-full blur-sm scale-100 transform translate-y-1"></div>
               
               {/* Main icon container with ultra-realistic 3D effect */}
               <div className="relative bg-black rounded-full overflow-hidden h-24 w-24 sm:h-[7.5rem] sm:w-[7.5rem] shadow-icon-3d hover:shadow-icon-hover transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 border-2 border-white/50 backdrop-blur-sm flex items-center justify-center">

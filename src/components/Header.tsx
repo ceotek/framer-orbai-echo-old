@@ -21,7 +21,7 @@ const Header = () => {
           <a href="/" className="flex items-center space-x-2 group">
             <div className="relative">
               {/* Ultra-realistic 3D shadow for header logo */}
-              <div className="absolute inset-0 bg-gradient-to-br from-gray-400/30 to-gray-600/30 rounded-xl blur-md opacity-25 scale-105 transform translate-y-1"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-400/20 to-gray-600/20 rounded-xl blur-sm opacity-15 scale-103 transform translate-y-0.5"></div>
               
               {/* Main logo container */}
               <div className="relative p-1 rounded-xl bg-black shadow-icon-3d hover:shadow-icon-hover transition-all duration-300 border border-white/20 backdrop-blur-sm">
