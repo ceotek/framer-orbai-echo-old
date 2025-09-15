@@ -1,10 +1,9 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import SecureContactForm from '@/components/SecureContactForm';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import { 
   MessageSquare, 
   Phone, 
@@ -125,70 +124,7 @@ const Contact = () => {
           <div className="container-max max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Contact Form */}
-              <Card className="bg-card/80 backdrop-blur-glass border border-border/60 shadow-glass rounded-2xl">
-                <CardHeader>
-                  <CardTitle className="text-2xl font-bold text-foreground mb-2">
-                    Secure Contact Form
-                  </CardTitle>
-                  <p className="text-muted-foreground">
-                    All communications are encrypted and handled with complete confidentiality.
-                  </p>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium text-foreground">Name *</label>
-                      <Input placeholder="Your full name" className="rounded-xl" />
-                    </div>
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium text-foreground">Organization</label>
-                      <Input placeholder="Company name" className="rounded-xl" />
-                    </div>
-                  </div>
-                  
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium text-foreground">Email *</label>
-                      <Input type="email" placeholder="your.email@domain.com" className="rounded-xl" />
-                    </div>
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium text-foreground">Phone</label>
-                      <Input type="tel" placeholder="+1 (555) 123-4567" className="rounded-xl" />
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-foreground">Service Interest</label>
-                    <select className="w-full px-3 py-2 bg-background border border-border rounded-xl text-foreground">
-                      <option>Select a service</option>
-                      <option>Digital Investigations</option>
-                      <option>Threat Intelligence</option>
-                      <option>Digital Footprint Removal</option>
-                      <option>Digital Asset Recovery</option>
-                      <option>Security Consultation</option>
-                      <option>Emergency Response</option>
-                    </select>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-foreground">Message *</label>
-                    <Textarea 
-                      placeholder="Describe your security needs or incident details. All information is kept strictly confidential."
-                      className="rounded-xl min-h-[120px]"
-                    />
-                  </div>
-                  
-                  <div className="text-xs text-muted-foreground bg-muted/50 p-3 rounded-xl">
-                    <Shield className="w-4 h-4 inline mr-2" />
-                    This form uses end-to-end encryption. Your information is secure and will only be accessed by authorized security personnel.
-                  </div>
-                  
-                  <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-xl shadow-depth hover:shadow-ultra transform hover:-translate-y-1 transition-all duration-300 h-12">
-                    <Send className="mr-2 h-5 w-5" />
-                    Send Secure Message
-                  </Button>
-                </CardContent>
-              </Card>
+              <SecureContactForm />
 
               {/* Additional Information */}
               <div className="space-y-8">

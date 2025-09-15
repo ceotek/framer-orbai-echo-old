@@ -76,7 +76,12 @@ const BlogAdmin = () => {
 
       setPosts(data || []);
     } catch (error) {
-      console.error('Error fetching posts:', error);
+      // Replace console.error with toast notification
+      toast({
+        title: 'Error',
+        description: 'Failed to fetch blog posts',
+        variant: 'destructive',
+      });
     } finally {
       setLoading(false);
     }
@@ -112,7 +117,12 @@ const BlogAdmin = () => {
 
       fetchPosts();
     } catch (error) {
-      console.error('Error deleting post:', error);
+      // Replace console.error with toast notification
+      toast({
+        title: 'Error',
+        description: 'Failed to delete post',
+        variant: 'destructive',
+      });
     }
   };
 

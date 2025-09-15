@@ -51,13 +51,15 @@ const Blog = () => {
         .order('published_at', { ascending: false });
 
       if (error) {
-        console.error('Error fetching posts:', error);
+        // Replace console.error with proper error handling
+        setPosts([]);
         return;
       }
 
       setPosts(data || []);
     } catch (error) {
-      console.error('Error fetching posts:', error);
+      // Handle unexpected errors silently in production
+      setPosts([]);
     } finally {
       setLoading(false);
     }

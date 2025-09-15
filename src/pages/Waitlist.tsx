@@ -24,6 +24,7 @@ const Waitlist = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [lastSubmission, setLastSubmission] = useState<number>(0);
   const { toast } = useToast();
 
   const useCaseOptions = [
@@ -57,10 +58,46 @@ const Waitlist = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Rate limiting check (5 minute cooldown)
+    const now = Date.now();
+    const cooldownPeriod = 5 * 60 * 1000; // 5 minutes
+    if (lastSubmission && (now - lastSubmission) < cooldownPeriod) {
+      const remainingTime = Math.ceil((cooldownPeriod - (now - lastSubmission)) / 60000);
+      toast({
+        title: "Please wait",
+        description: `You can submit again in ${remainingTime} minute(s).`,
+        variant: "destructive"
+      });
+      return;
+    }
+    
+    // Input validation
     if (!formData.email || !formData.project_description) {
       toast({
         title: "Required fields missing",
         description: "Please fill in your email and project description.",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    // Email format validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      toast({
+        title: "Invalid email format",
+        description: "Please enter a valid email address.",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    // Content validation
+    if (formData.project_description.length < 10) {
+      toast({
+        title: "Description too short",
+        description: "Please provide more details about your project (at least 10 characters).",
         variant: "destructive"
       });
       return;
@@ -72,27 +109,39 @@ const Waitlist = () => {
       const { error } = await supabase
         .from('waitlist')
         .insert([{
-          email: formData.email,
-          twitter: formData.twitter || null,
-          telegram: formData.telegram || null,
-          project_name: formData.project_name || null,
+          email: formData.email.toLowerCase().trim(),
+          twitter: formData.twitter?.trim() || null,
+          telegram: formData.telegram?.trim() || null,
+          project_name: formData.project_name?.trim() || null,
           use_cases: formData.use_cases,
-          other_use_case: formData.other_use_case || null,
-          project_description: formData.project_description
+          other_use_case: formData.other_use_case?.trim() || null,
+          project_description: formData.project_description.trim()
         }]);
 
       if (error) throw error;
 
+      setLastSubmission(now);
       setIsSubmitted(true);
       toast({
         title: "Successfully joined waitlist!",
         description: "We'll be in touch with early access details soon."
       });
     } catch (error) {
-      console.error('Error submitting waitlist form:', error);
+      // Replace console.error with proper error handling
+      let errorMessage = "Please try again later or contact support.";
+      
+      if (error instanceof Error) {
+        // Handle specific Supabase errors
+        if (error.message.includes("duplicate key value")) {
+          errorMessage = "This email is already on our waitlist.";
+        } else if (error.message.includes("invalid input")) {
+          errorMessage = "Please check your input and try again.";
+        }
+      }
+      
       toast({
         title: "Error joining waitlist",
-        description: "Please try again later or contact support.",
+        description: errorMessage,
         variant: "destructive"
       });
     } finally {

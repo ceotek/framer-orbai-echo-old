@@ -60,39 +60,81 @@ const Auth = () => {
     setLoading(false);
   };
 
+  const handleSignUp = async (email: string, password: string) => {
+    setLoading(true);
+    setError(null);
+
+    const redirectUrl = `${window.location.origin}/`;
+
+    const { error } = await supabase.auth.signUp({
+      email,
+      password,
+      options: {
+        emailRedirectTo: redirectUrl
+      }
+    });
+
+    if (error) {
+      setError(error.message);
+    } else {
+      setError("Check your email for a confirmation link!");
+    }
+
+    setLoading(false);
+  };
 
 
-  const SignInForm = () => {
+
+  const SignInForm = ({ isSignUp }: { isSignUp: boolean }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const onSubmit = (e: React.FormEvent) => {
       e.preventDefault();
-      handleSignIn(email, password);
+      
+      // Basic validation
+      if (!email || !password) {
+        setError("Please fill in all fields");
+        return;
+      }
+      
+      if (password.length < 6) {
+        setError("Password must be at least 6 characters");
+        return;
+      }
+
+      if (isSignUp) {
+        handleSignUp(email, password);
+      } else {
+        handleSignIn(email, password);
+      }
     };
 
     return (
       <form onSubmit={onSubmit} className="space-y-4">
         <div className="space-y-2">
-          <Label htmlFor="signin-email">Email</Label>
+          <Label htmlFor="auth-email">Email</Label>
           <Input
-            id="signin-email"
+            id="auth-email"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
             className="bg-background/50 backdrop-blur-glass border-border/60"
+            placeholder="your.email@domain.com"
           />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="signin-password">Password</Label>
+          <Label htmlFor="auth-password">Password</Label>
           <Input
-            id="signin-password"
+            id="auth-password"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
+            minLength={6}
             className="bg-background/50 backdrop-blur-glass border-border/60"
+            placeholder={isSignUp ? "Minimum 6 characters" : "Password"}
           />
         </div>
         <Button 
@@ -100,7 +142,7 @@ const Auth = () => {
           className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
           disabled={loading}
         >
-          {loading ? 'Signing In...' : 'Sign In'}
+          {loading ? (isSignUp ? 'Creating Account...' : 'Signing In...') : (isSignUp ? 'Create Account' : 'Sign In')}
         </Button>
       </form>
     );
@@ -122,14 +164,30 @@ const Auth = () => {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          {error && (
-            <Alert className="mb-4 border-destructive/50 bg-destructive/10">
-              <AlertCircle className="h-4 w-4" />
-              <AlertDescription>{error}</AlertDescription>
-            </Alert>
-          )}
+          <Tabs defaultValue="signin" className="w-full">
+            <TabsList className="grid w-full grid-cols-2 mb-4">
+              <TabsTrigger value="signin">Sign In</TabsTrigger>
+              <TabsTrigger value="signup">Sign Up</TabsTrigger>
+            </TabsList>
+            
+            {error && (
+              <Alert className={`mb-4 ${error.includes("Check your email") ? "border-green-500/50 bg-green-500/10" : "border-destructive/50 bg-destructive/10"}`}>
+                <AlertCircle className="h-4 w-4" />
+                <AlertDescription>{error}</AlertDescription>
+              </Alert>
+            )}
 
-          <SignInForm />
+            <TabsContent value="signin">
+              <SignInForm isSignUp={false} />
+            </TabsContent>
+            
+            <TabsContent value="signup">
+              <SignInForm isSignUp={true} />
+              <p className="text-xs text-muted-foreground mt-2 text-center">
+                New accounts require admin approval for access.
+              </p>
+            </TabsContent>
+          </Tabs>
         </CardContent>
       </Card>
     </div>

@@ -102,7 +102,9 @@ const BlogEditor = () => {
         status: data.status as 'draft' | 'published' | 'archived'
       });
     } catch (error) {
-      console.error('Error fetching post:', error);
+      // Replace console.error with proper error handling
+      // Navigate back if post not found
+      navigate('/blog-admin');
     } finally {
       setLoading(false);
     }
@@ -200,7 +202,12 @@ const BlogEditor = () => {
 
       setPost(prev => ({ ...prev, status }));
     } catch (error) {
-      console.error('Error saving post:', error);
+      // Replace console.error with user-facing error
+      toast({
+        title: 'Error',
+        description: 'Failed to save post. Please try again.',
+        variant: 'destructive',
+      });
     } finally {
       setSaving(false);
     }
