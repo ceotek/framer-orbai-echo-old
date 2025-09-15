@@ -32,7 +32,7 @@ const Header = () => {
                   decoding="sync"
                   draggable={false}
                   className="relative z-10 h-10 w-10 object-contain select-none"
-                  style={{ WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden' }}
+                  style={{ WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
                 />
               </div>
             </div>

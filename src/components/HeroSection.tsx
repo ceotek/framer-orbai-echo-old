@@ -53,8 +53,8 @@ const HeroSection = () => {
             <div className="relative">
               {/* Clean, static logo (remove layered shadow elements) */}
               
-              {/* Main icon container with subtle 3D effect */}
-              <div className="relative bg-black rounded-full overflow-hidden h-24 w-24 sm:h-[7.5rem] sm:w-[7.5rem] border border-white/30 flex items-center justify-center shadow-[0_6px_24px_rgba(0,0,0,0.25),0_2px_8px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.3),0_3px_12px_rgba(0,0,0,0.2)] transition-[box-shadow] duration-300">
+              {/* Main icon container - static, no hover transitions */}
+              <div className="relative bg-black rounded-full overflow-hidden h-24 w-24 sm:h-[7.5rem] sm:w-[7.5rem] border border-white/30 flex items-center justify-center shadow-[0_6px_24px_rgba(0,0,0,0.25),0_2px_8px_rgba(0,0,0,0.15)]">
                 {/* Inner glow effect - keep subtle without shrinking the image area */}
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-full"></div>
                 <img
