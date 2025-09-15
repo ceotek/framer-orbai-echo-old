@@ -22,7 +22,7 @@ const Header = () => {
           <a href="/" className="flex items-center space-x-2 group">
             <div className="relative">
               {/* Simplified logo container to prevent visual issues */}
-              <div className="relative p-1 rounded-xl bg-black shadow-glass hover:shadow-glass-hover transition-all duration-300 border border-white/20 backdrop-blur-sm">
+              <div className="relative p-1 rounded-xl bg-black shadow-medium transition-none border border-white/20">
                 <img
                   src={diLogo}
                   alt="DEFEND INFO logo"
@@ -32,7 +32,7 @@ const Header = () => {
                   decoding="sync"
                   draggable={false}
                   className="relative z-10 h-10 w-10 object-contain select-none"
-                  style={{ WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
+                  style={{ WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden' }}
                 />
               </div>
             </div>

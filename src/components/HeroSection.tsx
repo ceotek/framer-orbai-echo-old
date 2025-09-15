@@ -51,10 +51,7 @@ const HeroSection = () => {
           {/* Logo */}
           <div className="flex items-center justify-center mb-6 sm:mb-8">
             <div className="relative">
-              {/* Subtle 3D shadow base */}
-              <div className="absolute inset-0 bg-black/15 rounded-full blur-xl scale-115 transform translate-x-1 translate-y-4"></div>
-              <div className="absolute inset-0 bg-black/20 rounded-full blur-lg scale-110 transform translate-x-0.5 translate-y-3"></div>
-              <div className="absolute inset-0 bg-black/25 rounded-full blur-md scale-105 transform translate-y-2"></div>
+              {/* Clean, static logo (remove layered shadow elements) */}
               
               {/* Main icon container with subtle 3D effect */}
               <div className="relative bg-black rounded-full overflow-hidden h-24 w-24 sm:h-[7.5rem] sm:w-[7.5rem] border border-white/30 flex items-center justify-center shadow-[0_6px_24px_rgba(0,0,0,0.25),0_2px_8px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.3),0_3px_12px_rgba(0,0,0,0.2)] transition-[box-shadow] duration-300">
@@ -67,7 +64,7 @@ const HeroSection = () => {
                   decoding="sync"
                   draggable={false}
                   className="w-full h-full object-contain select-none"
-                  style={{ WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
+                  style={{ WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden' }}
                 />
               </div>
             </div>
