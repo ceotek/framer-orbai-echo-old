@@ -15,9 +15,9 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
       <div className="container-max">
-        <div className="flex items-center justify-between h-16 px-6">
+        <div className="flex items-center justify-between h-16 px-4 sm:px-6">
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <img src={orbaiLogo} alt="ORB AI" className="h-8 w-8" />

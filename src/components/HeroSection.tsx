@@ -6,7 +6,7 @@ import founderPhoto from '@/assets/founder-photo.jpg';
 
 const HeroSection = () => {
   return (
-    <section className="section-padding pt-32 bg-gradient-hero relative overflow-hidden">
+    <section className="pt-24 pb-16 px-4 sm:px-6 lg:py-20 lg:px-6 bg-gradient-hero relative overflow-hidden">
       {/* Geometric Background Pattern */}
       <div className="absolute inset-0 opacity-30">
         {/* Large Circle Ring */}
@@ -38,32 +38,32 @@ const HeroSection = () => {
       </div>
       
       <div className="container-max relative z-10">
-        <div className="text-center max-w-4xl mx-auto">
-          {/* Badge */}
-          <Badge variant="secondary" className="mb-8 px-4 py-2 text-sm font-medium">
-            <Sparkles className="w-4 h-4 mr-2" />
-            AI AUTOMATION FOR BUSINESSES
-          </Badge>
+          <div className="text-center max-w-4xl mx-auto">
+            {/* Badge */}
+            <Badge variant="secondary" className="mb-6 sm:mb-8 px-4 py-2 text-sm font-medium">
+              <Sparkles className="w-4 h-4 mr-2" />
+              AI AUTOMATION FOR BUSINESSES
+            </Badge>
 
-          {/* Logo */}
-          <div className="flex items-center justify-center mb-8">
-            <div className="bg-primary rounded-full p-6 shadow-strong">
-              <img src={orbaiLogo} alt="ORB AI" className="h-16 w-16 filter invert" />
+            {/* Logo */}
+            <div className="flex items-center justify-center mb-6 sm:mb-8">
+              <div className="bg-primary rounded-full p-4 sm:p-6 shadow-strong">
+                <img src={orbaiLogo} alt="ORB AI" className="h-12 w-12 sm:h-16 sm:w-16 filter invert" />
+              </div>
             </div>
-          </div>
 
-          {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 tracking-tight">
-            ORB AI
-          </h1>
+            {/* Main Heading */}
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-foreground mb-4 sm:mb-6 tracking-tight">
+              ORB AI
+            </h1>
 
-          {/* Subheading */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed">
-            Custom AI solutions, built for the innovators of tomorrow
-          </p>
+            {/* Subheading */}
+            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 sm:mb-12 leading-relaxed px-4">
+              Custom AI solutions, built for the innovators of tomorrow
+            </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-12 sm:mb-16 px-4">
             <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3">
               Get Template
               <ArrowRight className="ml-2 h-5 w-5" />
