@@ -65,7 +65,7 @@ const Blog = () => {
 
       <Header />
 
-      <main className="pt-24 relative z-10">
+      <main className="pt-24 relative z-10 pb-16">
         <section className="py-16 px-4 sm:px-6 lg:py-20">
           <div className="container-max max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -78,12 +78,12 @@ const Blog = () => {
                 Cybersecurity Blog
               </h1>
 
-              <p className="text-lg sm:text-xl text-muted-foreground mb-4 leading-relaxed max-w-3xl mx-auto">
+              <p className="text-lg sm:text-xl text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto">
                 Research, case studies, and actionable guidance from our investigations and security operations.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
               {posts.map((post, idx) => (
                 <Card key={idx} className="bg-card/80 backdrop-blur-glass border border-border/60 shadow-glass hover:shadow-glass-hover transition-all duration-300 rounded-2xl">
                   <CardHeader>
@@ -100,6 +100,19 @@ const Blog = () => {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+
+            {/* Newsletter signup section */}
+            <div className="text-center py-16 bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 rounded-3xl border border-border/30">
+              <h3 className="text-3xl font-bold text-foreground mb-4">
+                Stay Updated
+              </h3>
+              <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+                Subscribe to our cybersecurity newsletter for the latest threat intelligence and security insights.
+              </p>
+              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-12 py-4 h-14 text-lg font-medium shadow-depth hover:shadow-ultra transform hover:-translate-y-1 transition-all duration-300 rounded-2xl">
+                Subscribe to Newsletter
+              </Button>
             </div>
           </div>
         </section>
