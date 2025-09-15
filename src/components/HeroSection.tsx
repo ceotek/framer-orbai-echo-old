@@ -6,8 +6,38 @@ import founderPhoto from '@/assets/founder-photo.jpg';
 
 const HeroSection = () => {
   return (
-    <section className="section-padding pt-32 bg-gradient-hero">
-      <div className="container-max">
+    <section className="section-padding pt-32 bg-gradient-hero relative overflow-hidden">
+      {/* Geometric Background Pattern */}
+      <div className="absolute inset-0 opacity-30">
+        {/* Large Circle Ring */}
+        <div className="absolute top-20 left-1/4 w-96 h-96 border border-muted-foreground/20 rounded-full"></div>
+        
+        {/* Medium Circle Ring */}
+        <div className="absolute top-40 right-1/3 w-64 h-64 border border-muted-foreground/15 rounded-full"></div>
+        
+        {/* Small Circle Ring */}
+        <div className="absolute bottom-32 left-1/3 w-32 h-32 border border-muted-foreground/10 rounded-full"></div>
+        
+        {/* Filled Circles */}
+        <div className="absolute top-32 right-1/4 w-24 h-24 bg-muted-foreground/10 rounded-full"></div>
+        <div className="absolute bottom-40 right-1/5 w-16 h-16 bg-muted-foreground/15 rounded-full"></div>
+        
+        {/* Small Dots */}
+        <div className="absolute top-60 left-1/5 w-3 h-3 bg-muted-foreground/20 rounded-full"></div>
+        <div className="absolute top-80 right-2/5 w-2 h-2 bg-muted-foreground/25 rounded-full"></div>
+        <div className="absolute bottom-60 left-2/5 w-4 h-4 bg-muted-foreground/15 rounded-full"></div>
+        <div className="absolute top-96 left-3/5 w-2 h-2 bg-muted-foreground/20 rounded-full"></div>
+        <div className="absolute bottom-80 right-1/6 w-3 h-3 bg-muted-foreground/10 rounded-full"></div>
+        
+        {/* Additional scattered elements */}
+        <div className="absolute top-44 left-1/6 w-1 h-1 bg-muted-foreground/30 rounded-full"></div>
+        <div className="absolute top-72 right-1/3 w-1 h-1 bg-muted-foreground/25 rounded-full"></div>
+        <div className="absolute bottom-96 left-2/3 w-1 h-1 bg-muted-foreground/20 rounded-full"></div>
+        <div className="absolute top-52 right-1/5 w-1 h-1 bg-muted-foreground/15 rounded-full"></div>
+        <div className="absolute bottom-52 left-1/4 w-1 h-1 bg-muted-foreground/25 rounded-full"></div>
+      </div>
+      
+      <div className="container-max relative z-10">
         <div className="text-center max-w-4xl mx-auto">
           {/* Badge */}
           <Badge variant="secondary" className="mb-8 px-4 py-2 text-sm font-medium">
