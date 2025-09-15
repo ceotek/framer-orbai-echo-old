@@ -69,7 +69,7 @@ const HeroSection = () => {
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-full"></div>
                 
                 {/* Icon */}
-                <img src={diLogo} alt="Defend Info logo" className="w-full h-full object-cover" loading="eager" decoding="sync" fetchPriority="high" width={120} height={120} style={{ opacity: 1, WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }} />
+                <img src={diLogo} alt="Defend Info logo" className="w-full h-full object-cover block" loading="eager" decoding="async" fetchPriority="high" width={120} height={120} style={{ WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }} />
               </div>
             </div>
           </div>
