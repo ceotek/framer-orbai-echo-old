@@ -12,6 +12,7 @@ import Blog from "./pages/Blog";
 import Auth from "./pages/Auth";
 import BlogAdmin from "./pages/BlogAdmin";
 import BlogEditor from "./pages/BlogEditor";
+import Waitlist from "./pages/Waitlist";
 import PreloadAssets from "@/components/PreloadAssets";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/mentoring" element={<Mentoring />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/waitlist" element={<Waitlist />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/blog-admin" element={<BlogAdmin />} />
           <Route path="/blog-editor" element={<BlogEditor />} />

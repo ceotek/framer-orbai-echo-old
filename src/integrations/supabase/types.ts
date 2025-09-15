@@ -228,6 +228,45 @@ export type Database = {
           },
         ]
       }
+      waitlist: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          other_use_case: string | null
+          project_description: string
+          project_name: string | null
+          telegram: string | null
+          twitter: string | null
+          updated_at: string
+          use_cases: string[] | null
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          other_use_case?: string | null
+          project_description: string
+          project_name?: string | null
+          telegram?: string | null
+          twitter?: string | null
+          updated_at?: string
+          use_cases?: string[] | null
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          other_use_case?: string | null
+          project_description?: string
+          project_name?: string | null
+          telegram?: string | null
+          twitter?: string | null
+          updated_at?: string
+          use_cases?: string[] | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
