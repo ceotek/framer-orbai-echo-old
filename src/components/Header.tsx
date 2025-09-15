@@ -25,7 +25,7 @@ const Header = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-gray-400/30 to-gray-600/30 rounded-xl blur-md opacity-25 scale-105 transform translate-y-1"></div>
               
               {/* Main logo container */}
-              <div className="relative p-1 rounded-xl bg-gradient-to-br from-white via-primary/10 to-primary/20 shadow-icon-3d hover:shadow-icon-hover transition-all duration-300 border border-white/20 backdrop-blur-sm">
+              <div className="relative p-1 rounded-xl bg-black shadow-icon-3d hover:shadow-icon-hover transition-all duration-300 border border-white/20 backdrop-blur-sm">
                 {/* Inner highlight */}
                 <div className="absolute inset-0.5 bg-gradient-to-br from-white/30 to-transparent rounded-lg blur-sm"></div>
                 
