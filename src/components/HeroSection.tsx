@@ -64,11 +64,11 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-row gap-2 sm:gap-4 justify-center mb-12 sm:mb-16 px-2 max-w-full">
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-4 sm:px-6 py-3 flex-1 max-w-[180px] text-sm sm:text-base">
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-4 sm:px-6 py-3 flex-1 max-w-[180px] text-sm sm:text-base shadow-[0_8px_16px_rgba(0,0,0,0.3)] hover:shadow-[0_12px_24px_rgba(0,0,0,0.4)] transform hover:-translate-y-1 transition-all duration-200 border-0 rounded-full">
               Get Template
               <ArrowRight className="ml-1 sm:ml-2 h-4 w-4 sm:h-5 sm:w-5" />
             </Button>
-            <Button size="lg" variant="secondary" className="px-4 sm:px-6 py-3 flex-1 max-w-[180px] text-sm sm:text-base">
+            <Button size="lg" variant="secondary" className="px-4 sm:px-6 py-3 flex-1 max-w-[180px] text-sm sm:text-base shadow-[0_6px_14px_rgba(0,0,0,0.15)] hover:shadow-[0_10px_20px_rgba(0,0,0,0.25)] transform hover:-translate-y-1 transition-all duration-200 border-0 rounded-full bg-white/90 hover:bg-white">
               See Our Services
             </Button>
           </div>
