@@ -2,11 +2,9 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import diLogo from '@/assets/di-logo.png';
-import { useDecodedImage } from '@/hooks/useDecodedImage';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { loaded: logoReady, src: logoUrl } = useDecodedImage(diLogo);
 
   const navItems = [
     { name: 'Home', href: '/' },
@@ -23,18 +21,12 @@ const Header = () => {
           {/* Logo */}
           <a href="/" className="flex items-center space-x-2 group">
             <div className="relative">
-              {/* Ultra-realistic 3D shadow for header logo */}
-              <div className="absolute inset-0 bg-gradient-to-br from-gray-400/20 to-gray-600/20 rounded-xl blur-sm opacity-15 scale-103 transform translate-y-0.5"></div>
-              
-              {/* Main logo container */}
-              <div className="relative p-1 rounded-xl bg-black shadow-icon-3d hover:shadow-icon-hover transition-all duration-300 border border-white/20 backdrop-blur-sm">
-                {/* Inner highlight */}
-                <div className="absolute inset-0.5 bg-gradient-to-br from-white/30 to-transparent rounded-lg blur-sm"></div>
-                <div
-                  className={`relative z-10 h-10 w-10 ${logoReady ? 'opacity-100' : 'opacity-0'} transform-gpu group-hover:scale-110 transition-[transform,opacity] duration-300`}
-                  role="img"
-                  aria-label="DI Logo"
-                  style={{ backgroundImage: logoReady ? `url(${logoUrl})` : 'none', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden' }}
+              {/* Simplified logo container to prevent visual issues */}
+              <div className="relative p-1 rounded-xl bg-black shadow-glass hover:shadow-glass-hover transition-all duration-300 border border-white/20 backdrop-blur-sm">
+                <img
+                  src={diLogo}
+                  alt="DI Logo"
+                  className="relative z-10 h-10 w-10 object-contain group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
             </div>

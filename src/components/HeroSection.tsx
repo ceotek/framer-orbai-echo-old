@@ -3,40 +3,31 @@ import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import diLogo from '@/assets/di-logo.png';
 import founderPhoto from '@/assets/founder-photo.jpg';
-import { useDecodedImage } from '@/hooks/useDecodedImage';
 
 const HeroSection = () => {
-  const { loaded: heroLogoReady, src: heroLogoUrl } = useDecodedImage(diLogo);
   return (
     <section className="pt-24 pb-16 px-4 sm:px-6 lg:py-20 lg:px-6 bg-gradient-hero relative overflow-hidden">
-      {/* Geometric Background Pattern */}
-      <div className="absolute inset-0 opacity-30 overflow-hidden">
+      {/* Geometric Background Pattern - Constrained to prevent overflow */}
+      <div className="absolute inset-0 opacity-30 overflow-hidden max-w-full">
         {/* Large Circle Ring */}
-        <div className="absolute top-20 left-1/4 w-80 h-80 sm:w-96 sm:h-96 border border-muted-foreground/20 rounded-full"></div>
+        <div className="absolute top-20 left-[10%] w-60 h-60 sm:w-80 sm:h-80 border border-muted-foreground/20 rounded-full"></div>
         
         {/* Medium Circle Ring */}
-        <div className="absolute top-40 right-1/3 w-48 h-48 sm:w-64 sm:h-64 border border-muted-foreground/15 rounded-full"></div>
+        <div className="absolute top-40 right-[15%] w-40 h-40 sm:w-48 sm:h-48 border border-muted-foreground/15 rounded-full"></div>
         
         {/* Small Circle Ring */}
-        <div className="absolute bottom-32 left-1/3 w-24 h-24 sm:w-32 sm:h-32 border border-muted-foreground/10 rounded-full"></div>
+        <div className="absolute bottom-32 left-[20%] w-20 h-20 sm:w-24 sm:h-24 border border-muted-foreground/10 rounded-full"></div>
         
         {/* Filled Circles */}
-        <div className="absolute top-32 right-1/4 w-16 h-16 sm:w-24 sm:h-24 bg-muted-foreground/10 rounded-full"></div>
-        <div className="absolute bottom-40 right-1/5 w-12 h-12 sm:w-16 sm:h-16 bg-muted-foreground/15 rounded-full"></div>
+        <div className="absolute top-32 right-[25%] w-12 h-12 sm:w-16 sm:h-16 bg-muted-foreground/10 rounded-full"></div>
+        <div className="absolute bottom-40 right-[30%] w-10 h-10 sm:w-12 sm:h-12 bg-muted-foreground/15 rounded-full"></div>
         
         {/* Small Dots */}
-        <div className="absolute top-60 left-1/5 w-3 h-3 bg-muted-foreground/20 rounded-full"></div>
-        <div className="absolute top-80 right-2/5 w-2 h-2 bg-muted-foreground/25 rounded-full"></div>
-        <div className="absolute bottom-60 left-2/5 w-4 h-4 bg-muted-foreground/15 rounded-full"></div>
-        <div className="absolute top-96 left-3/5 w-2 h-2 bg-muted-foreground/20 rounded-full"></div>
-        <div className="absolute bottom-80 right-1/6 w-3 h-3 bg-muted-foreground/10 rounded-full"></div>
-        
-        {/* Additional scattered elements */}
-        <div className="absolute top-44 left-1/6 w-1 h-1 bg-muted-foreground/30 rounded-full"></div>
-        <div className="absolute top-72 right-1/3 w-1 h-1 bg-muted-foreground/25 rounded-full"></div>
-        <div className="absolute bottom-96 left-2/3 w-1 h-1 bg-muted-foreground/20 rounded-full"></div>
-        <div className="absolute top-52 right-1/5 w-1 h-1 bg-muted-foreground/15 rounded-full"></div>
-        <div className="absolute bottom-52 left-1/4 w-1 h-1 bg-muted-foreground/25 rounded-full"></div>
+        <div className="absolute top-60 left-[15%] w-3 h-3 bg-muted-foreground/20 rounded-full"></div>
+        <div className="absolute top-80 right-[35%] w-2 h-2 bg-muted-foreground/25 rounded-full"></div>
+        <div className="absolute bottom-60 left-[35%] w-4 h-4 bg-muted-foreground/15 rounded-full"></div>
+        <div className="absolute top-96 left-[50%] w-2 h-2 bg-muted-foreground/20 rounded-full"></div>
+        <div className="absolute bottom-80 right-[20%] w-3 h-3 bg-muted-foreground/10 rounded-full"></div>
       </div>
       
       <div className="container-max relative z-10 max-w-full">
@@ -70,12 +61,11 @@ const HeroSection = () => {
                 {/* Inner glow effect - keep subtle without shrinking the image area */}
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-full"></div>
                 
-                {/* Icon as background to avoid decode flicker on desktop */}
-                <div
-                  className={`w-full h-full bg-center bg-no-repeat bg-contain block ${heroLogoReady ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
-                  role="img"
-                  aria-label="Defend Info logo"
-                  style={{ backgroundImage: heroLogoReady ? `url(${heroLogoUrl})` : 'none', WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden' }}
+                {/* Simplified logo rendering to prevent flickering */}
+                <img
+                  src={diLogo}
+                  alt="Defend Info logo"
+                  className="w-full h-full object-contain"
                 />
               </div>
             </div>
