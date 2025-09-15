@@ -28,7 +28,7 @@ const Header = () => {
                 {/* Inner highlight */}
                 <div className="absolute inset-0.5 bg-gradient-to-br from-white/30 to-transparent rounded-lg blur-sm"></div>
                 
-                <img src={diLogo} alt="DI Logo" className="relative z-10 h-10 w-10 transform group-hover:scale-110 transition-transform duration-300 object-contain" />
+                <img src={diLogo} alt="DI Logo" className="relative z-10 h-10 w-10 transform-gpu group-hover:scale-110 transition-transform duration-300 object-contain" loading="eager" decoding="sync" fetchPriority="high" width={40} height={40} style={{ WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }} />
               </div>
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">DEFEND INFO</span>
