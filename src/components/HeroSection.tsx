@@ -63,12 +63,12 @@ const HeroSection = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-12 sm:mb-16 px-4 max-w-full">
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-12 py-4 h-14 text-base font-medium shadow-depth hover:shadow-ultra transform hover:-translate-y-1 transition-all duration-300 border-0 rounded-full min-w-[240px] w-full sm:w-auto">
+          <div className="flex flex-row gap-3 sm:gap-6 justify-center mb-12 sm:mb-16 px-4 max-w-full">
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 sm:px-12 py-4 h-14 text-sm sm:text-base font-medium shadow-depth hover:shadow-ultra transform hover:-translate-y-1 transition-all duration-300 border-0 rounded-full flex-1 max-w-[200px] sm:min-w-[240px] sm:w-auto">
               Get Template
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-1 sm:ml-2 h-4 sm:h-5 w-4 sm:w-5" />
             </Button>
-            <Button size="lg" variant="secondary" className="bg-background text-foreground hover:bg-background/90 px-12 py-4 h-14 text-base font-medium shadow-glass hover:shadow-glass-hover transform hover:-translate-y-1 transition-all duration-300 border border-border/60 rounded-full min-w-[240px] w-full sm:w-auto">
+            <Button size="lg" variant="secondary" className="bg-background text-foreground hover:bg-background/90 px-6 sm:px-12 py-4 h-14 text-sm sm:text-base font-medium shadow-glass hover:shadow-glass-hover transform hover:-translate-y-1 transition-all duration-300 border border-border/60 rounded-full flex-1 max-w-[200px] sm:min-w-[240px] sm:w-auto">
               See Our Services
             </Button>
           </div>
